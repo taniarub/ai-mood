@@ -26,20 +26,17 @@ const AboutSection = () => {
     <section ref={sectionRef} className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Section badge */}
-          <div className="fade-in-up inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-3 mb-8">
-            <Brain className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium text-primary">Обо мне</span>
-          </div>
-
           {/* Main content */}
           <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-8">
             Создаю контент будущего с помощью ИИ
           </h2>
 
+          <p className="fade-in-up text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
+            Я создаю фото, видео и сайты с помощью нейросетей.
+          </p>
+
           <p className="fade-in-up text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
-            Я создаю фото, видео и сайты с помощью нейросетей. 
-            <span className="text-primary font-medium"> Без съёмки — быстро, реалистично и красиво.</span>
+            <span className="text-primary font-medium">Без съёмки — быстро, реалистично и красиво.</span>
           </p>
 
           {/* Features grid */}

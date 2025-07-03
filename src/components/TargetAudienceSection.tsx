@@ -67,11 +67,6 @@ const TargetAudienceSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="fade-in-up inline-flex items-center gap-2 bg-secondary/50 border border-primary/20 rounded-full px-6 py-3 mb-8">
-              <Briefcase className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-primary">Целевая аудитория</span>
-            </div>
-
             <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-6">
               Кому подойдёт
             </h2>
@@ -109,19 +104,6 @@ const TargetAudienceSection = () => {
             })}
           </div>
 
-          {/* Bottom CTA */}
-          <div className="fade-in-up text-center mt-16 bg-card border border-border rounded-2xl p-8 shadow-soft">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Не нашли свою сферу?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Нейросети могут создать контент для любого бизнеса. Расскажите о своём проекте, 
-              и мы найдём идеальное решение.
-            </p>
-            <button className="bg-primary text-primary-foreground hover:bg-accent px-8 py-3 rounded-xl font-medium shadow-soft hover:shadow-medium transition-smooth transform hover:scale-105">
-              Обсудить проект
-            </button>
-          </div>
         </div>
       </div>
     </section>

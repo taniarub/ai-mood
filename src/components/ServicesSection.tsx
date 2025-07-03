@@ -55,13 +55,8 @@ const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="scale-in inline-flex items-center gap-2 bg-secondary/50 border border-primary/20 rounded-full px-6 py-3 mb-8">
-              <Globe className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-primary">Услуги</span>
-            </div>
-
             <h2 className="scale-in text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Что я создаю
+              Что я создаю?
             </h2>
             
             <p className="scale-in text-xl text-muted-foreground max-w-3xl mx-auto">

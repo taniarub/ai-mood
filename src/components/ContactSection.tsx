@@ -50,11 +50,6 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="fade-in-up inline-flex items-center gap-2 bg-secondary/50 border border-primary/20 rounded-full px-6 py-3 mb-8">
-              <MessageCircle className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-primary">Контакты</span>
-            </div>
-
             <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-6">
               Обсудим ваш проект
             </h2>
@@ -78,7 +73,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">hello@moodai.ru</p>
+                    <p className="text-muted-foreground">taniarub8@gmail.com</p>
                   </div>
                 </div>
 
@@ -88,7 +83,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Telegram</p>
-                    <p className="text-muted-foreground">@moodai_creator</p>
+                    <p className="text-muted-foreground">@laura_palmers_theme</p>
                   </div>
                 </div>
               </div>

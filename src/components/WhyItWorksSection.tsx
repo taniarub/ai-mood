@@ -79,11 +79,6 @@ const WhyItWorksSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="scale-in inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-6 py-3 mb-8">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-primary">Преимущества</span>
-            </div>
-
             <h2 className="scale-in text-4xl md:text-5xl font-bold text-foreground mb-6">
               Почему это работает
             </h2>
@@ -132,19 +127,6 @@ const WhyItWorksSection = () => {
             })}
           </div>
 
-          {/* Call to action */}
-          <div className="scale-in text-center mt-16 bg-gradient-primary rounded-2xl p-8 text-white shadow-medium">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Готовы попробовать ИИ-контент?
-            </h3>
-            <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Расскажите о своём проекте, и я создам несколько пробных вариантов, 
-              чтобы вы увидели возможности технологии.
-            </p>
-            <button className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-xl font-medium shadow-soft hover:shadow-medium transition-smooth transform hover:scale-105">
-              Получить пробные варианты
-            </button>
-          </div>
         </div>
       </div>
     </section>

@@ -56,14 +56,13 @@ const HeroSection = () => {
           </div>
 
           {/* Image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl shadow-hover">
+          <div className="relative lg:flex lg:justify-end">
+            <div className="relative w-80 h-60 overflow-hidden rounded-2xl opacity-60 hover:opacity-75 transition-smooth">
               <img 
                 src="/lovable-uploads/456b4043-2928-4a14-bed4-fc5c1d80f2ea.png" 
                 alt="Создание контента с помощью ИИ" 
-                className="w-full h-auto object-cover transform hover:scale-105 transition-smooth"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-50"></div>
             </div>
           </div>
         </div>

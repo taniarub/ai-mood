@@ -68,7 +68,7 @@ const TargetAudienceSection = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Кому подойдёт
+              Кому подойдёт?
             </h2>
             
             <p className="fade-in-up text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -83,7 +83,7 @@ const TargetAudienceSection = () => {
               return (
                 <div 
                   key={index}
-                  className="fade-in-up group bg-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-1"
+                  className="fade-in-up group bg-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-2 hover:scale-[1.02]"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="text-center">

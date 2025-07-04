@@ -65,9 +65,9 @@ const PortfolioSection = () => {
     {
       id: 6,
       image: portfolioJewelry,
-      title: "Брендинг",
-      category: "Фотография",
-      description: "Корпоративные фотосессии и контент"
+      title: "Лендинги и сайты",
+      category: "Веб-дизайн",
+      description: "Современные сайты и посадочные страницы"
     }
   ];
 
@@ -91,7 +91,7 @@ const PortfolioSection = () => {
             {portfolioItems.map((item, index) => (
               <div 
                 key={item.id}
-                className="scale-in group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-smooth"
+                className="scale-in group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-2 hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
@@ -138,15 +138,6 @@ const PortfolioSection = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="text-center mt-16">
-            <p className="scale-in text-muted-foreground mb-6">
-              Хотите увидеть больше работ или обсудить ваш проект?
-            </p>
-            <button className="scale-in bg-secondary text-secondary-foreground hover:bg-secondary/80 px-8 py-3 rounded-xl font-medium shadow-soft hover:shadow-medium transition-smooth">
-              Связаться со мной
-            </button>
-          </div>
         </div>
       </div>
     </section>

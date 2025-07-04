@@ -71,11 +71,11 @@ const ServicesSection = () => {
               return (
                 <div 
                   key={index}
-                  className="scale-in group bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-2"
+                  className="scale-in group bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-2 hover:scale-[1.02]"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-start gap-6">
-                    <div className="w-14 h-14 gradient-primary rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-medium transition-smooth">
+                    <div className="w-14 h-14 gradient-primary rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-medium transition-smooth group-hover:scale-110 group-hover:rotate-3">
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                     

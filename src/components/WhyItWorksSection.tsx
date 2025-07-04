@@ -80,7 +80,7 @@ const WhyItWorksSection = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="scale-in text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Почему это работает
+              Почему это работает?
             </h2>
             
             <p className="scale-in text-xl text-muted-foreground max-w-3xl mx-auto">

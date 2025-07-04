@@ -21,8 +21,7 @@ const HeroSection = () => {
 
           {/* Main heading */}
           <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-tight">
-            <span className="block">Mood</span>
-            <span className="gradient-primary bg-clip-text text-transparent">AI</span>
+            <span className="gradient-primary bg-clip-text text-transparent">MoodAI</span>
           </h1>
 
           {/* Subtitle */}

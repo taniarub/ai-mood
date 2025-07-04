@@ -67,7 +67,10 @@ const ContactSection = () => {
               </h3>
               
               <div className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft">
+                <a 
+                  href="mailto:taniarub8@gmail.com"
+                  className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-1 hover:scale-[1.02] cursor-pointer"
+                >
                   <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
@@ -75,9 +78,14 @@ const ContactSection = () => {
                     <p className="font-medium text-foreground">Email</p>
                     <p className="text-muted-foreground">taniarub8@gmail.com</p>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft">
+                <a 
+                  href="https://t.me/laura_palmers_theme"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-1 hover:scale-[1.02] cursor-pointer"
+                >
                   <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
@@ -85,7 +93,7 @@ const ContactSection = () => {
                     <p className="font-medium text-foreground">Telegram</p>
                     <p className="text-muted-foreground">@laura_palmers_theme</p>
                   </div>
-                </div>
+                </a>
               </div>
 
               <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-xl">

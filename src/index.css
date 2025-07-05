@@ -2,53 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* MoodAI Design System - Light minimalist theme */
+/* MoodAI Design System - Violet and purple theme */
 
 @layer base {
   :root {
-    /* Core brand colors for light minimalist design */
+    /* Core brand colors based on specified palette */
     --background: 0 0% 100%;
-    --foreground: 220 14% 20%;
+    --foreground: 266 50% 32%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 14% 20%;
+    --card-foreground: 266 50% 32%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 14% 20%;
+    --popover-foreground: 266 50% 32%;
 
-    /* Primary - Purple (#7C3AED) */
-    --primary: 260 87% 57%;
+    /* Primary - Soft Violet (#B39DDB) */
+    --primary: 266 50% 73%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light Purple (#9F7AEA) */
-    --secondary: 267 48% 70%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - Soft Lilac (#D8B4E2) */
+    --secondary: 294 47% 80%;
+    --secondary-foreground: 266 50% 32%;
 
-    /* Accent - Soft Purple */
-    --accent: 260 87% 57%;
+    /* Accent - Grape (#7D5BA6) */
+    --accent: 266 30% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 250 20% 96%;
-    --muted-foreground: 220 14% 50%;
+    --muted: 266 20% 95%;
+    --muted-foreground: 266 20% 50%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 250 20% 92%;
-    --input: 250 20% 96%;
-    --ring: 260 87% 57%;
+    --border: 266 20% 90%;
+    --input: 266 20% 95%;
+    --ring: 266 50% 73%;
 
     --radius: 1rem;
 
-    /* Custom gradient definitions for light theme */
-    --gradient-hero-bg: linear-gradient(180deg, hsl(0 0% 100%), hsl(250 20% 98%));
-    --gradient-button: linear-gradient(135deg, hsl(267 48% 70%), hsl(260 87% 57%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(250 20% 98%));
+    /* Custom gradient definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(266 50% 73%), hsl(294 47% 80%));
+    --gradient-accent: linear-gradient(135deg, hsl(266 30% 52%), hsl(266 50% 73%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(266 20% 98%));
 
-    /* Shadow definitions with subtle purple tints */
-    --shadow-soft: 0 4px 20px -4px hsl(260 87% 57% / 0.15);
-    --shadow-medium: 0 8px 30px -8px hsl(260 87% 57% / 0.25);
-    --shadow-hover: 0 12px 40px -12px hsl(260 87% 57% / 0.3), 0 0 30px hsl(260 87% 57% / 0.2);
+    /* Shadow definitions with purple tints */
+    --shadow-soft: 0 4px 20px -4px hsl(266 50% 73% / 0.15);
+    --shadow-medium: 0 8px 30px -8px hsl(266 50% 73% / 0.25);
+    --shadow-hover: 0 12px 40px -12px hsl(266 30% 52% / 0.3);
 
     /* Animation timing */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -122,12 +122,12 @@
 
 @layer components {
   /* Custom utility classes for MoodAI */
-  .gradient-hero-bg {
-    background: var(--gradient-hero-bg);
+  .gradient-primary {
+    background: var(--gradient-primary);
   }
   
-  .gradient-button {
-    background: var(--gradient-button);
+  .gradient-accent {
+    background: var(--gradient-accent);
   }
   
   .gradient-subtle {
@@ -152,16 +152,6 @@
   
   .transition-bounce {
     transition: var(--transition-bounce);
-  }
-  
-  /* Diagonal image frame */
-  .diagonal-frame {
-    transform: rotate(-3deg);
-    transition: transform 0.3s ease;
-  }
-  
-  .diagonal-frame:hover {
-    transform: rotate(-1deg) scale(1.05);
   }
   
   /* Scroll-triggered animations */

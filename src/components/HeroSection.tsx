@@ -55,16 +55,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Image */}
-          <div className="relative lg:flex lg:justify-end">
-            <div className="relative w-80 h-60 overflow-hidden rounded-2xl opacity-60 hover:opacity-75 transition-smooth">
-              <img 
-                src="/lovable-uploads/456b4043-2928-4a14-bed4-fc5c1d80f2ea.png" 
-                alt="Создание контента с помощью ИИ" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
 

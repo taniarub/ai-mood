@@ -1,73 +1,65 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden gradient-subtle pt-16">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 gradient-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 gradient-accent rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-8 left-1/2 w-80 h-80 gradient-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '4s' }}></div>
-      </div>
+    <section className="min-h-screen flex items-center justify-center gradient-hero-bg pt-16">
+      <div className="container mx-auto px-4 relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
+            {/* Main Content - centered */}
+            <div className="lg:col-span-2 text-center lg:text-left lg:pr-8">
+              {/* Main heading */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-sans">
+                <span style={{ color: '#7C3AED' }}>MoodAI</span>
+              </h1>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          {/* Content */}
-          <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-secondary/50 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3 mb-8 shadow-soft">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-foreground">Нейроконтент нового поколения</span>
+              {/* Subtitle */}
+              <p className="text-xl md:text-2xl lg:text-3xl text-foreground mb-8 leading-relaxed font-medium">
+                ИИ-контент для брендов и маркетплейсов
+              </p>
+
+              {/* Description */}
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Создаю уникальные фото, видео и сайты с помощью искусственного интеллекта. 
+                Без съёмки, быстро и профессионально.
+              </p>
+
+              {/* CTA Button */}
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  variant="hero" 
+                  size="xl" 
+                  className="group rounded-full px-12 py-4 text-lg font-semibold"
+                  onClick={() => {
+                    document.getElementById('portfolio')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    });
+                  }}
+                >
+                  Смотреть портфолио
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
 
-            {/* Main heading */}
-            <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-tight">
-              <span className="gradient-primary bg-clip-text text-transparent">MoodAI</span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="hero-subtitle text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed">
-              ИИ-контент для брендов и маркетплейсов
-            </p>
-
-            {/* Description */}
-            <p className="hero-subtitle text-lg text-muted-foreground mb-12 leading-relaxed">
-              Создаю уникальные фото, видео и сайты с помощью искусственного интеллекта. 
-              Без съёмки, быстро и профессионально.
-            </p>
-
-            {/* CTA Button */}
-            <div className="hero-button">
-              <Button 
-                variant="hero" 
-                size="xl" 
-                className="group"
-                onClick={() => {
-                  document.getElementById('portfolio')?.scrollIntoView({ 
-                    behavior: 'smooth' 
-                  });
-                }}
-              >
-                Смотреть портфолио
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="relative lg:flex lg:justify-end">
-            <div className="relative w-80 h-60 overflow-hidden rounded-2xl opacity-60 hover:opacity-75 transition-smooth">
-              <img 
-                src="/lovable-uploads/456b4043-2928-4a14-bed4-fc5c1d80f2ea.png" 
-                alt="Создание контента с помощью ИИ" 
-                className="w-full h-full object-cover"
-              />
+            {/* Decorative Image - max 40% width */}
+            <div className="lg:col-span-1 flex justify-center lg:justify-end">
+              <div className="relative max-w-sm w-full">
+                <div className="diagonal-frame">
+                  <div className="relative overflow-hidden rounded-3xl shadow-soft">
+                    <img 
+                      src="/lovable-uploads/43e4e5e2-9a66-42f6-a8aa-11db8d62ac5e.png" 
+                      alt="Создание контента с помощью ИИ" 
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 };

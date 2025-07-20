@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Mail, MessageCircle, Send, Check } from "lucide-react";
+import { Mail, MessageCircle, Send, Check, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -7,10 +7,16 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     project: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // ⚠️ ВАЖНО: В production переместите токен на backend!
+  const TELEGRAM_BOT_TOKEN = '8017033289:AAFs2Zm2-eU1opGIYYDibKbmLe9bqikNAnI';
+  const TELEGRAM_CHAT_ID = '277234658'; // ✅ Chat ID настроен!
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,11 +36,79 @@ const ContactSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendToTelegram = async (data: typeof formData) => {
+    const message = `
+🎯 *НОВАЯ ЗАЯВКА С САЙТА MOODAI*
+
+👤 *Имя:* ${data.name}
+📧 *Email:* ${data.email}
+📱 *Телефон:* ${data.phone || 'Не указан'}
+🎨 *Тип проекта:* ${data.project || 'Не выбран'}
+
+💬 *Сообщение:*
+${data.message}
+
+⏰ *Время:* ${new Date().toLocaleString('ru-RU')}
+🌐 *Источник:* Сайт MoodAI
+    `.trim();
+
+    try {
+      const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: message,
+          parse_mode: 'Markdown',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      return result.ok;
+    } catch (error) {
+      console.error('Ошибка отправки в Telegram:', error);
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Здесь будет логика отправки формы
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus('error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const success = await sendToTelegram(formData);
+      
+      if (success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          project: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Ошибка отправки:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -45,12 +119,12 @@ const ContactSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 gradient-subtle">
+    <section ref={sectionRef} className="py-20 gradient-subtle magic-section">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-6 magic-text">
               Обсудим ваш проект
             </h2>
             
@@ -67,62 +141,57 @@ const ContactSection = () => {
               </h3>
               
               <div className="space-y-6">
-                <a 
-                  href="mailto:taniarub8@gmail.com"
-                  className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-1 hover:scale-[1.02] cursor-pointer"
-                >
+                <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft magic-card">
                   <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">taniarub8@gmail.com</p>
-                  </div>
-                </a>
-
-                <a 
-                  href="https://t.me/laura_palmers_theme"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-1 hover:scale-[1.02] cursor-pointer"
-                >
-                  <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Telegram</p>
-                    <p className="text-muted-foreground">@laura_palmers_theme</p>
+                    <p className="text-muted-foreground">Быстрые ответы в мессенджере</p>
                   </div>
-                </a>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft magic-card">
+                  <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-muted-foreground">Подробное обсуждение проекта</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-xl">
-                <h4 className="font-semibold text-foreground mb-3">Что нужно для начала работы:</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 gradient-primary rounded-full"></div>
-                    Описание проекта и задач
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 gradient-primary rounded-full"></div>
-                    Примеры желаемого стиля
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 gradient-primary rounded-full"></div>
-                    Сроки и бюджет
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 gradient-primary rounded-full"></div>
-                    Технические требования
-                  </li>
-                </ul>
-              </div>
+              {/* Status notifications */}
+              {submitStatus === 'success' && (
+                <div className="mt-6 p-4 bg-green-50 border-2 border-green-200 rounded-xl animate-in fade-in duration-300">
+                  <div className="flex items-center gap-2 text-green-800">
+                    <Check className="w-5 h-5" />
+                    <span className="font-semibold">Заявка отправлена в Telegram!</span>
+                  </div>
+                  <p className="text-green-700 text-sm mt-1">
+                    Сообщение доставлено. Отвечу как можно скорее! 📱
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mt-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
+                  <div className="flex items-center gap-2 text-red-800">
+                    <AlertCircle className="w-5 h-5" />
+                    <span className="font-semibold">Ошибка отправки</span>
+                  </div>
+                  <p className="text-red-700 text-sm mt-1">
+                    Попробуйте еще раз или напишите напрямую в Telegram
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Contact form */}
-            <div className="fade-in-up">
-              <form onSubmit={handleSubmit} className="bg-card border border-border rounded-2xl p-6 shadow-soft">
-                <div className="space-y-4">
+            <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Имя *
@@ -138,7 +207,7 @@ const ContactSection = () => {
                       placeholder="Ваше имя"
                     />
                   </div>
-
+                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email *
@@ -151,66 +220,80 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
-                      placeholder="ваш@email.com"
+                      placeholder="your@email.com"
                     />
                   </div>
-
-                  <div>
-                    <label htmlFor="project" className="block text-sm font-medium text-foreground mb-2">
-                      Тип проекта
-                    </label>
-                    <select
-                      id="project"
-                      name="project"
-                      value={formData.project}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
-                    >
-                      <option value="">Выберите тип проекта</option>
-                      <option value="photo">Фото с ИИ-моделями</option>
-                      <option value="video">Видео для реклами и Reels</option>
-                      <option value="products">Карточки товаров</option>
-                      <option value="website">Сайт или лендинг</option>
-                      <option value="other">Другое</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Сообщение *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={4}
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth resize-none"
-                      placeholder="Расскажите о вашем проекте..."
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    variant="cta" 
-                    size="lg" 
-                    className="w-full group"
-                    disabled={isSubmitted}
-                  >
-                    {isSubmitted ? (
-                      <>
-                        <Check className="w-5 h-5" />
-                        Сообщение отправлено!
-                      </>
-                    ) : (
-                      <>
-                        Отправить сообщение
-                        <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                      </>
-                    )}
-                  </Button>
                 </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    Телефон
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
+                    placeholder="+7 (999) 123-45-67"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="project" className="block text-sm font-medium text-foreground mb-2">
+                    Тип проекта
+                  </label>
+                  <select
+                    id="project"
+                    name="project"
+                    value={formData.project}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
+                  >
+                    <option value="">Выберите тип проекта</option>
+                    <option value="photo">Фото с ИИ-моделями</option>
+                    <option value="video">Видео для рекламы и Reels</option>
+                    <option value="products">Карточки товаров</option>
+                    <option value="website">Сайт или лендинг</option>
+                    <option value="other">Другое</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Сообщение *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth resize-none"
+                    placeholder="Расскажите о вашем проекте..."
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full gap-2 relative magic-button"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent" />
+                      Отправляем в Telegram...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Отправить в Telegram
+                    </>
+                  )}
+                </Button>
               </form>
             </div>
           </div>

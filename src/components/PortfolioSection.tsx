@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Eye, ExternalLink } from "lucide-react";
 import portfolioFashion from "@/assets/portfolio-fashion.jpg";
 import portfolioCosmetics from "@/assets/portfolio-cosmetics.jpg";
@@ -6,6 +7,7 @@ import portfolioJewelry from "@/assets/portfolio-jewelry.jpg";
 
 const PortfolioSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,45 +33,54 @@ const PortfolioSection = () => {
       image: portfolioFashion,
       title: "Fashion съёмка",
       category: "Фотография",
-      description: "Модная фотосессия с ИИ-моделью для брендинга"
+      description: "Модная фотосессия с ИИ-моделью для брендинга",
+      route: "/photography"
     },
     {
       id: 2,
       image: portfolioCosmetics,
       title: "Косметика",
       category: "Продуктовая съёмка",
-      description: "Стильные фото косметических продуктов"
+      description: "Стильные фото косметических продуктов",
+      route: "/product-photography"
     },
     {
       id: 3,
       image: portfolioJewelry,
       title: "Украшения",
       category: "Предметная съёмка",
-      description: "Элегантная презентация ювелирных изделий"
+      description: "Элегантная презентация ювелирных изделий",
+      route: "/item-photography"
     },
-    // Добавляем больше примеров для полноты
     {
       id: 4,
       image: portfolioFashion,
       title: "Lifestyle контент",
       category: "Видео",
-      description: "Динамичные ролики для социальных сетей"
+      description: "Динамичные ролики для социальных сетей",
+      route: "/video"
     },
     {
       id: 5,
       image: portfolioCosmetics,
       title: "Карточки товаров",
       category: "E-commerce",
-      description: "Профессиональные изображения для маркетплейсов"
+      description: "Профессиональные изображения для маркетплейсов",
+      route: "/ecommerce"
     },
     {
       id: 6,
       image: portfolioJewelry,
       title: "Лендинги и сайты",
       category: "Веб-дизайн",
-      description: "Современные сайты и посадочные страницы"
+      description: "Современные сайты и посадочные страницы",
+      route: "/web-design"
     }
   ];
+
+  const handleItemClick = (route: string) => {
+    navigate(route);
+  };
 
   return (
     <section id="portfolio" ref={sectionRef} className="py-20 bg-background">
@@ -82,7 +93,7 @@ const PortfolioSection = () => {
             </h2>
             
             <p className="scale-in text-xl text-muted-foreground max-w-3xl mx-auto">
-              Примеры ИИ-контента, созданного для различных брендов и проектов
+              Примеры ИИ-контента, созданного для различных брендов и проектов. Кликните на категорию, чтобы посмотреть больше работ.
             </p>
           </div>
 
@@ -91,8 +102,9 @@ const PortfolioSection = () => {
             {portfolioItems.map((item, index) => (
               <div 
                 key={item.id}
-                className="scale-in group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-2 hover:scale-105"
+                className="scale-in group relative bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-smooth hover:-translate-y-2 hover:scale-105 cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => handleItemClick(item.route)}
               >
                 <div className="relative overflow-hidden">
                   <img 
@@ -111,7 +123,13 @@ const PortfolioSection = () => {
                           </span>
                           <h3 className="text-white font-semibold">{item.title}</h3>
                         </div>
-                        <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-smooth">
+                        <button 
+                          className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-smooth"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleItemClick(item.route);
+                          }}
+                        >
                           <ExternalLink className="w-5 h-5 text-white" />
                         </button>
                       </div>
@@ -133,6 +151,10 @@ const PortfolioSection = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {item.description}
                   </p>
+                  
+                  <div className="mt-4 text-xs text-primary font-medium">
+                    Нажмите, чтобы посмотреть больше →
+                  </div>
                 </div>
               </div>
             ))}

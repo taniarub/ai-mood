@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Brain, Zap, Star } from "lucide-react";
+import { Brain, Zap, Star, DollarSign } from "lucide-react";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,13 +40,13 @@ const AboutSection = () => {
           </p>
 
           {/* Features grid */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             <div className="fade-in-up text-center group">
               <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-soft group-hover:shadow-medium transform group-hover:scale-110 transition-smooth">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Быстро</h3>
-              <p className="text-muted-foreground">Готовый результат за несколько часов вместо недель съёмок</p>
+              <p className="text-muted-foreground text-sm">Готовый результат за несколько часов вместо недель съёмок</p>
             </div>
 
             <div className="fade-in-up text-center group" style={{ animationDelay: '0.2s' }}>
@@ -54,7 +54,7 @@ const AboutSection = () => {
                 <Brain className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Умно</h3>
-              <p className="text-muted-foreground">Нейросети создают уникальный контент под ваши задачи</p>
+              <p className="text-muted-foreground text-sm">Нейросети создают уникальный контент под ваши задачи</p>
             </div>
 
             <div className="fade-in-up text-center group" style={{ animationDelay: '0.4s' }}>
@@ -62,7 +62,15 @@ const AboutSection = () => {
                 <Star className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Качественно</h3>
-              <p className="text-muted-foreground">Профессиональный результат, неотличимый от реальной съёмки</p>
+              <p className="text-muted-foreground text-sm">Профессиональный результат, неотличимый от реальной съёмки</p>
+            </div>
+
+            <div className="fade-in-up text-center group" style={{ animationDelay: '0.6s' }}>
+              <div className="w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-soft group-hover:shadow-medium transform group-hover:scale-110 transition-smooth">
+                <DollarSign className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Экономично</h3>
+              <p className="text-muted-foreground text-sm">Стоимость в разы ниже традиционной съёмки и производства</p>
             </div>
           </div>
         </div>

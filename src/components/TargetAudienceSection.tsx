@@ -49,13 +49,13 @@ const TargetAudienceSection = () => {
     },
     {
       icon: Palette,
-      title: "Косметика",
+      title: "Косметика и уход",
       description: "Бьюти-бренды и косметические продукты",
       color: "from-purple-500 to-indigo-500"
     },
     {
       icon: Gem,
-      title: "Украшения",
+      title: "Предметная съемка",
       description: "Ювелирные изделия и аксессуары",
       color: "from-yellow-500 to-purple-500"
     }

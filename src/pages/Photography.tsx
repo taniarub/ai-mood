@@ -7,7 +7,7 @@ const Photography = () => {
       <Header />
       <PortfolioGallery
         category="Фотография"
-        title="Fashion & Portrait съёмка"
+        title="AI-модели для брендов"
         description="Профессиональные фотографии моделей, портреты и модные съёмки, созданные с помощью ИИ-технологий"
       />
     </>

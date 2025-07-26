@@ -7,7 +7,7 @@ const ProductPhotography = () => {
       <Header />
       <PortfolioGallery
         category="Продуктовая съёмка"
-        title="Косметика и товары"
+        title="Косметика и уход"
         description="Стильная презентация косметических продуктов, товаров и брендинговых материалов"
       />
     </>

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Upload, Plus, X, Eye, ArrowLeft } from "lucide-react";
+import { Upload, Plus, X, Eye, ArrowLeft, ExternalLink } from "lucide-react";
 
 interface WorkItem {
   id: string;
@@ -13,6 +13,7 @@ interface WorkItem {
   description: string;
   image: string;
   category: string;
+  url?: string;
 }
 
 interface PortfolioGalleryProps {
@@ -28,7 +29,8 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
   const [newWork, setNewWork] = useState({
     title: '',
     description: '',
-    image: ''
+    image: '',
+    url: ''
   });
   const navigate = useNavigate();
 
@@ -54,7 +56,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
         category
       };
       setWorks(prev => [...prev, work]);
-      setNewWork({ title: '', description: '', image: '' });
+      setNewWork({ title: '', description: '', image: '', url: '' });
       setIsAddingNew(false);
     }
   };
@@ -132,6 +134,15 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
                   rows={3}
                 />
               </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2">Ссылка на сайт (опционально)</label>
+                <Input
+                  value={newWork.url}
+                  onChange={(e) => setNewWork(prev => ({ ...prev, url: e.target.value }))}
+                  placeholder="https://example.com"
+                />
+              </div>
               
               <div>
                 <label className="block text-sm font-medium mb-2">Изображение</label>
@@ -194,6 +205,20 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
                     <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
                       <Eye className="w-4 h-4" />
                     </Button>
+                    {work.url && (
+                      <a
+                        href={work.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white gap-1">
+                          <ExternalLink className="w-4 h-4" />
+                          На сайт
+                        </Button>
+                      </a>
+                    )}
                     <Button 
                       size="sm" 
                       variant="destructive"
@@ -208,9 +233,19 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {work.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-sm mb-3">
                     {work.description}
                   </p>
+                  {work.url && (
+                    <a
+                      href={work.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary text-sm font-medium hover:underline"
+                    >
+                      Перейти на сайт →
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}

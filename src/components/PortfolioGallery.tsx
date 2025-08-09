@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,6 +33,14 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
     url: ''
   });
   const navigate = useNavigate();
+
+  // Автоматически загружаем изображения для категории при монтировании компонента
+  useEffect(() => {
+    if (category && works.length === 0) {
+      const categoryImages = getCategoryImages(category);
+      setWorks(categoryImages);
+    }
+  }, [category]);
 
   function getCategoryImages(category: string): WorkItem[] {
     const images: WorkItem[] = [];
@@ -312,6 +320,40 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             description: 'Современная фотосессия модной одежды',
             image: '/images/одежда-и-аксессуары/Screenshot 2025-07-20 at 23.03.29.png',
             category: 'Одежда и аксессуары'
+          }
+        );
+        break;
+
+      case 'предметная съёмка':
+      case 'product-photography':
+        images.push(
+          {
+            id: 'product1',
+            title: 'AI технологии - Предметная съемка',
+            description: 'Профессиональная съемка технологических продуктов с акцентом на инновации',
+            image: '/images/website/ai.png',
+            category: 'Предметная съёмка'
+          },
+          {
+            id: 'product2',
+            title: 'Цветочные композиции - Предметная съемка',
+            description: 'Элегантная съемка цветочных букетов и композиций',
+            image: '/images/website/flower.png',
+            category: 'Предметная съёмка'
+          },
+          {
+            id: 'product3',
+            title: 'Образовательные проекты - Предметная съемка',
+            description: 'Профессиональная презентация образовательных материалов',
+            image: '/images/website/shool.png',
+            category: 'Предметная съёмка'
+          },
+          {
+            id: 'product4',
+            title: 'Переводческие сервисы - Предметная съемка',
+            description: 'Современная съемка технологических сервисов',
+            image: '/images/website/any.png',
+            category: 'Предметная съёмка'
           }
         );
         break;

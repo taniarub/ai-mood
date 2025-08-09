@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Zap, Globe } from "lucide-react";
+import { ArrowLeft, Zap, Globe, Smartphone, Rocket, CheckCircle, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 
 interface PortfolioCategory {
@@ -64,19 +64,73 @@ const WebDesignService = () => {
           </div>
 
           {/* Service description */}
-          <div className="max-w-lg mx-auto mb-20 text-center">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Zap className="w-7 h-7 text-primary" />
-              <h2 className="text-3xl font-bold">Что входит в услугу</h2>
+          <div className="max-w-5xl mx-auto mb-20">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
+                  <Sparkles className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                  Что входит в услугу
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Комплексные решения для создания современных и конверсионных веб-проектов
+              </p>
             </div>
-            <ul className="text-muted-foreground text-base mb-8 list-none flex flex-wrap justify-center gap-x-6 gap-y-2 text-center">
-              <li className="inline-flex">• Быстрая и качественная разработка — ваши проекты готовы в срок</li>
-              <li className="inline-flex">• Современные технологии и AI-инструменты для уникального контента</li>
-              <li className="inline-flex">• Индивидуальный подход к каждому клиенту и проекту</li>
-              <li className="inline-flex">• Адаптивный дизайн для всех устройств</li>
-              <li className="inline-flex">• Фокус на высокую конверсию и рост вашего бизнеса</li>
-              <li className="inline-flex">• Полная техническая поддержка и помощь после запуска</li>
-            </ul>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <Rocket className="w-6 h-6 text-emerald-600" />,
+                  title: "Быстрая и качественная разработка",
+                  description: "Ваши проекты готовы в срок с соблюдением всех технических требований"
+                },
+                {
+                  icon: <Sparkles className="w-6 h-6 text-blue-600" />,
+                  title: "Современные технологии и AI-инструменты",
+                  description: "Использование передовых решений для создания уникального контента"
+                },
+                {
+                  icon: <Globe className="w-6 h-6 text-purple-600" />,
+                  title: "Индивидуальный подход к каждому проекту",
+                  description: "Персонализированные решения под специфику вашего бизнеса"
+                },
+                {
+                  icon: <Smartphone className="w-6 h-6 text-orange-600" />,
+                  title: "Адаптивный дизайн для всех устройств",
+                  description: "Оптимальное отображение на компьютерах, планшетах и смартфонах"
+                },
+                {
+                  icon: <CheckCircle className="w-6 h-6 text-green-600" />,
+                  title: "Фокус на высокую конверсию и рост бизнеса",
+                  description: "Проектирование с упором на достижение ваших бизнес-целей"
+                },
+                {
+                  icon: <Zap className="w-6 h-6 text-rose-600" />,
+                  title: "Полная техническая поддержка после запуска",
+                  description: "Консультации и помощь в обслуживании готового проекта"
+                }
+              ].map((service, index) => (
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm hover:-translate-y-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-background to-muted flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                        {service.icon}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Pricing packages */}

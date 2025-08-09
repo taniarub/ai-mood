@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Camera, Video, Globe, Code, ArrowRight } from "lucide-react";
+import { Camera, Video, Globe, Code, ArrowRight, CheckCircle } from "lucide-react";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
@@ -95,21 +95,26 @@ const ServicesSection = () => {
                 
                 <CardContent className="space-y-6">
                   {/* Features */}
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-foreground">Что входит в услугу:</h4>
-                    <ul className="space-y-2">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-primary" />
+                      </div>
+                      <h4 className="font-semibold text-foreground">Что входит в услугу:</h4>
+                    </div>
+                    <div className="grid gap-3">
                       {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center gap-3 text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                          {feature}
-                        </li>
+                        <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-background to-muted/20 border border-muted/30">
+                          <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                          <span className="text-muted-foreground font-medium">{feature}</span>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
                   {/* CTA Button */}
                   <Button 
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm"
                     variant="outline"
                     size="lg"
                   >

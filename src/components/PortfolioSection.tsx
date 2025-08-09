@@ -32,7 +32,7 @@ const PortfolioSection = () => {
       id: 1,
       image: portfolioFashion,
       title: "AI-модели для брендов",
-      category: "Фотография",
+      category: "Одежда и аксессуары",
       description: "Модная фотосессия с ИИ-моделью для брендинга",
       route: "/photography"
     },
@@ -40,7 +40,7 @@ const PortfolioSection = () => {
       id: 2,
       image: portfolioCosmetics,
       title: "Косметика и уход",
-      category: "Продуктовая съёмка",
+      category: "Косметика и уход",
       description: "Стильные фото косметических продуктов",
       route: "/product-photography"
     },
@@ -72,8 +72,8 @@ const PortfolioSection = () => {
       id: 6,
       image: portfolioJewelry,
       title: "Лендинги и сайты",
-      category: "Веб-дизайн",
-      description: "Современные сайты и посадочные страницы",
+      category: "Лендинги и сайты",
+      description: "Современные сайты и лендинги с высоким UX и конверсией",
       route: "/web-design"
     }
   ];

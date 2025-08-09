@@ -24,11 +24,7 @@ interface PortfolioGalleryProps {
 }
 
 const PortfolioGallery = ({ category, title, description, initialWorks = [] }: PortfolioGalleryProps) => {
-  const [works, setWorks] = useState<WorkItem[]>(() => {
-    // Initialize with images based on category
-    const categoryImages = getCategoryImages(category);
-    return categoryImages.length > 0 ? categoryImages : initialWorks;
-  });
+  const [works, setWorks] = useState<WorkItem[]>(initialWorks);
   const [isAddingNew, setIsAddingNew] = useState(false);
   const [newWork, setNewWork] = useState({
     title: '',
@@ -412,22 +408,26 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {description}
           </p>
-          <Badge variant="secondary" className="text-primary">
-            {category}
-          </Badge>
+          {category && (
+            <Badge variant="secondary" className="text-primary">
+              {category}
+            </Badge>
+          )}
         </div>
 
         {/* Add new work button */}
-        <div className="flex justify-center mb-8">
-          <Button
-            onClick={() => setIsAddingNew(!isAddingNew)}
-            className="gap-2"
-            variant={isAddingNew ? "outline" : "default"}
-          >
-            {isAddingNew ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-            {isAddingNew ? "Отменить" : "Добавить работу"}
-          </Button>
-        </div>
+        {category && (
+          <div className="flex justify-center mb-8">
+            <Button
+              onClick={() => setIsAddingNew(!isAddingNew)}
+              className="gap-2"
+              variant={isAddingNew ? "outline" : "default"}
+            >
+              {isAddingNew ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+              {isAddingNew ? "Отменить" : "Добавить работу"}
+            </Button>
+          </div>
+        )}
 
         {/* Add new work form */}
         {isAddingNew && (

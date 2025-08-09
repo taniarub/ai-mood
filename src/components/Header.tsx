@@ -13,7 +13,7 @@ const Header = () => {
 
   const navigationItems = [
     { label: "Обо мне", id: "about" },
-    { label: "Портфолио", id: "portfolio" },
+    { label: "Услуги", id: "services" },
     { label: "FAQ", id: "faq" },
     { label: "Контакты", id: "contacts" }
   ];

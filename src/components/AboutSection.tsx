@@ -28,7 +28,7 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main content */}
           <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-8">
-            Создаю контент будущего с помощью ИИ
+            Ваши идеи оживают за часы, а не недели!
           </h2>
 
           <p className="fade-in-up text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">

@@ -4,10 +4,13 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ContactSection from "@/components/ContactSection";
 import FAQSection from "@/components/FAQSection";
+import JsonLd from "@/components/JsonLd";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <JsonLd type="website" />
+      <JsonLd type="organization" />
       <Header />
       <div id="hero">
         <HeroSection />

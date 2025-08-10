@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Главная страница -->
+  <url>
+    <loc>https://yourdomain.com/</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Страницы услуг -->
+  <url>
+    <loc>https://yourdomain.com/photography</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/product-photography</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/item-photography</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/video</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/ecommerce</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/web-design</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/photo-video-service</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://yourdomain.com/web-design-service</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

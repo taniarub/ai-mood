@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Camera, Video, Globe, Code, ArrowRight, CheckCircle } from "lucide-react";
+import { Camera, Video, Globe, Code, ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const ServicesSection = () => {
     {
       id: "photo-video",
       title: "Генерация фотографий и видео",
-      description: "Создаю профессиональный визуальный контент для социальных сетей, маркетплейсов и брендинга",
+      description: "Создаём профессиональный визуальный контент для социальных сетей, маркетплейсов и брендинга",
       features: [
         "Фотосессии для брендов",
         "Съемка косметических продуктов", 
@@ -31,7 +31,7 @@ const ServicesSection = () => {
     {
       id: "web-design",
       title: "Создание сайтов и лендингов",
-      description: "Разрабатываю современные веб-сайты и лендинги с высоким UX и конверсией для бизнеса",
+      description: "Разрабатываем современные веб-сайты и лендинги с высоким UX и конверсией для бизнеса",
       features: [
         "Корпоративные сайты",
         "Продающие лендинги",
@@ -55,14 +55,19 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-gradient-to-br from-background via-background to-muted/10">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Выберите услугу
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Выберите услугу
+              </h2>
+            </div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Два основных направления работы с ИИ-технологиями для создания качественного контента
             </p>
@@ -73,15 +78,15 @@ const ServicesSection = () => {
             {services.map((service) => (
               <Card 
                 key={service.id}
-                className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
+                className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border bg-card shadow-soft backdrop-blur-sm"
                 onClick={() => handleServiceClick(service.route)}
               >
                 <CardHeader className="pb-6">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 bg-primary/10 rounded-full">
+                    <div className="p-3 bg-primary/10 rounded-full border border-primary/20">
                       {service.icon}
                     </div>
-                    <Badge variant="secondary" className="text-primary">
+                    <Badge variant="secondary" className="text-primary bg-primary/10 border border-primary/20">
                       ИИ-технологии
                     </Badge>
                   </div>
@@ -97,14 +102,14 @@ const ServicesSection = () => {
                   {/* Features */}
                   <div className="space-y-4">
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20">
                         <CheckCircle className="w-4 h-4 text-primary" />
                       </div>
                       <h4 className="font-semibold text-foreground">Что входит в услугу:</h4>
                     </div>
                     <div className="grid gap-3">
                       {service.features.map((feature, index) => (
-                        <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-gradient-to-r from-background to-muted/20 border border-muted/30">
+                        <div key={index} className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 border border-muted/50">
                           <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
                           <span className="text-muted-foreground font-medium">{feature}</span>
                         </div>
@@ -114,7 +119,7 @@ const ServicesSection = () => {
 
                   {/* CTA Button */}
                   <Button 
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm"
+                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 shadow-sm border border-primary/30"
                     variant="outline"
                     size="lg"
                   >

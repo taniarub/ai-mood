@@ -71,7 +71,7 @@ const HeroSection = () => {
                 });
               }}
             >
-              Смотреть портфолио
+              Бесплатная консультация
               <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>

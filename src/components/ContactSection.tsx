@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Mail, MessageCircle, Send, Check, AlertCircle } from "lucide-react";
+import { Mail, MessageCircle, Send, Check, AlertCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -119,64 +119,67 @@ ${data.message}
   };
 
   return (
-    <section ref={sectionRef} className="py-20 gradient-subtle magic-section">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-background via-background to-muted/10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-6 magic-text">
-              Обсудим ваш проект
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="fade-in-up text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Обсудим ваш проект
+              </h2>
+            </div>
             
             <p className="fade-in-up text-xl text-muted-foreground max-w-3xl mx-auto">
-              Расскажите о ваших задачах, и я предложу оптимальное решение с использованием ИИ
+              Расскажите о ваших задачах, и мы предложим оптимальное решение с использованием ИИ
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact info */}
-            <div className="fade-in-up">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Свяжитесь со мной
-              </h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft magic-card">
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-white" />
+            <div className="fade-in-up space-y-6">
+              <div className="group p-6 bg-card border border-border rounded-xl shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <MessageCircle className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Telegram</p>
-                    <p className="text-muted-foreground">Быстрые ответы в мессенджере</p>
+                    <p className="font-semibold text-foreground mb-1">Telegram</p>
+                    <p className="text-sm text-muted-foreground">Быстрые ответы в мессенджере</p>
                   </div>
                 </div>
+              </div>
 
-                <div className="flex items-center gap-4 p-4 bg-card border border-border rounded-xl shadow-soft magic-card">
-                  <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
+              <div className="group p-6 bg-card border border-border rounded-xl shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">Подробное обсуждение проекта</p>
+                    <p className="font-semibold text-foreground mb-1">Email</p>
+                    <p className="text-sm text-muted-foreground">Подробное обсуждение проекта</p>
                   </div>
                 </div>
               </div>
 
               {/* Status notifications */}
               {submitStatus === 'success' && (
-                <div className="mt-6 p-4 bg-green-50 border-2 border-green-200 rounded-xl animate-in fade-in duration-300">
-                  <div className="flex items-center gap-2 text-green-800">
+                <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl animate-in fade-in duration-300">
+                  <div className="flex items-center gap-2 text-emerald-800">
                     <Check className="w-5 h-5" />
                     <span className="font-semibold">Заявка отправлена в Telegram!</span>
                   </div>
-                  <p className="text-green-700 text-sm mt-1">
+                  <p className="text-emerald-700 text-sm mt-1">
                     Сообщение доставлено. Отвечу как можно скорее! 📱
                   </p>
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="mt-6 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
+                <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
                   <div className="flex items-center gap-2 text-red-800">
                     <AlertCircle className="w-5 h-5" />
                     <span className="font-semibold">Ошибка отправки</span>
@@ -203,7 +206,7 @@ ${data.message}
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
+                      className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
                       placeholder="Ваше имя"
                     />
                   </div>
@@ -219,7 +222,7 @@ ${data.message}
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
+                      className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -235,7 +238,7 @@ ${data.message}
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
+                    className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
                     placeholder="+7 (999) 123-45-67"
                   />
                 </div>
@@ -249,7 +252,7 @@ ${data.message}
                     name="project"
                     value={formData.project}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth"
+                    className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
                   >
                     <option value="">Выберите тип проекта</option>
                     <option value="photo">Фото с ИИ-моделями</option>
@@ -271,7 +274,7 @@ ${data.message}
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-border rounded-xl bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-smooth resize-none"
+                    className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300 resize-none"
                     placeholder="Расскажите о вашем проекте..."
                   />
                 </div>
@@ -279,18 +282,18 @@ ${data.message}
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full gap-2 relative magic-button"
+                  className="w-full gap-2 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent" />
-                      Отправляем в Telegram...
+                      Отправляем...
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Отправить в Telegram
+                      Отправить заявку
                     </>
                   )}
                 </Button>

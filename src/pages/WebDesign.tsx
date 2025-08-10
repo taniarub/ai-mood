@@ -21,14 +21,16 @@ const WebDesign = () => {
             title: 'AnyTranslator — AI-переводчик',
             description: 'Продуктовый сайт с лаконичным дизайном и акцентом на CTA',
             image: '/images/website/any.png',
-            url: 'https://anytranslator.app/'
+            url: 'https://anytranslator.app/',
+            category: 'website'
           },
           {
             id: 'flower',
             title: 'Mon Amour Flowers',
             description: 'Современный сайт цветочного магазина с элегантным дизайном',
             image: '/images/website/flower.png',
-            url: 'https://mon-amour-flowers.lovable.app/'
+            url: 'https://mon-amour-flowers.lovable.app/',
+            category: 'website'
           },
           {
             id: 'school',
@@ -36,6 +38,13 @@ const WebDesign = () => {
             description: 'Лендинг языковой школы',
             image: '/images/website/shool.png',
             url: 'https://language-school-clone.lovable.app/'
+          },
+          {
+            id: 'pilates',
+            title: 'Pilates LabSpace',
+            description: 'Современный сайт студии пилатеса с элегантным дизайном и удобной записью на занятия',
+            image: '/images/website/pilates.png',
+            url: 'https://pilates-labspace-clone.lovable.app'
           }
         ]}
       />

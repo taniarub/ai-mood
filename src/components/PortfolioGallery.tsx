@@ -424,7 +424,17 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
   };
 
   const handleBackToPortfolio = () => {
-    navigate('/#portfolio');
+    // Определяем на какую страницу услуги вернуться в зависимости от категории
+    if (category === 'Лендинги и сайты' || category === 'web-design') {
+      navigate('/web-design-service');
+    } else if (category === 'Косметика и уход' || category === 'cosmetics' || 
+               category === 'Одежда и аксессуары' || category === 'fashion' ||
+               category === 'Предметная съёмка' || category === 'product-photography') {
+      navigate('/photo-video-service');
+    } else {
+      // Если категория не определена, возвращаемся на главную страницу к портфолио
+      navigate('/#portfolio');
+    }
   };
 
   return (
@@ -438,7 +448,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             className="gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Назад к портфолио
+            Назад к услуге
           </Button>
         </div>
 

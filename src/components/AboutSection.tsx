@@ -32,11 +32,11 @@ const AboutSection = () => {
           </h2>
 
           <p className="fade-in-up text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
-          Мы создаём фото, видео и сайты с помощью нейросетей.
+          Мы создаём фото, видео и сайты с помощью нейросетей
           </p>
 
           <p className="fade-in-up text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
-            <span className="text-primary font-medium">Быстро, красиво и с учётом задач вашего бизнеса..</span>
+            <span className="text-primary font-medium">Быстро, красиво и с учётом задач вашего бизнеса</span>
           </p>
 
           {/* Features grid */}

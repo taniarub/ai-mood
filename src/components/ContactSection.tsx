@@ -124,7 +124,7 @@ ${data.message}
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-baseline justify-center gap-3 mb-6">
               <div className="flex items-baseline gap-1">
                 <Sparkles className="w-8 h-8 text-primary" />
               </div>
@@ -141,7 +141,12 @@ ${data.message}
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact info */}
             <div className="fade-in-up space-y-6">
-              <div className="group p-6 bg-card border border-border rounded-xl shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+              <a 
+                href="https://t.me/laura_palmers_theme" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group p-6 bg-card border border-border rounded-xl shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-1 block"
+              >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <MessageCircle className="w-6 h-6 text-primary" />
@@ -151,9 +156,12 @@ ${data.message}
                     <p className="text-sm text-muted-foreground">Быстрые ответы в мессенджере</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
-              <div className="group p-6 bg-card border border-border rounded-xl shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+              <a 
+                href="mailto:taniarub8@gmail.com" 
+                className="group p-6 bg-card border border-border rounded-xl shadow-soft hover:shadow-md transition-all duration-300 hover:-translate-y-1 block"
+              >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="w-6 h-6 text-blue-600" />
@@ -163,7 +171,7 @@ ${data.message}
                     <p className="text-sm text-muted-foreground">Подробное обсуждение проекта</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* Status notifications */}
               {submitStatus === 'success' && (

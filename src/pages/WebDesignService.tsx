@@ -162,7 +162,7 @@ const WebDesignService = () => {
                 <div className="flex items-baseline gap-1">
                   <Sparkles className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                <h2 className="text-4xl font-bold text-foreground">
                   Что входит в услугу
                 </h2>
               </div>

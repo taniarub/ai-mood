@@ -60,7 +60,7 @@ const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-baseline justify-center gap-3 mb-6">
               <div className="flex items-baseline gap-1">
                 <Sparkles className="w-8 h-8 text-primary" />
               </div>

@@ -64,9 +64,9 @@ const HeroSection = () => {
             <Button 
               variant="outline"
               size="lg"
-              className="group border-2 border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300 px-8 py-4 text-lg font-semibold"
+              className="group border-2 border-primary/30 bg-background text-foreground hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-lg font-semibold"
               onClick={() => {
-                document.getElementById('portfolio')?.scrollIntoView({ 
+                document.getElementById('contacts')?.scrollIntoView({ 
                   behavior: 'smooth' 
                 });
               }}

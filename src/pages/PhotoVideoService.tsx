@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ShoppingBag, Camera, Zap, CheckCircle, Sparkles, Send, AlertCircle } from "lucide-react";
+import { ArrowLeft, ShoppingBag, Camera, Zap, CheckCircle, Send, AlertCircle, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface PortfolioCategory {
   id: string;
@@ -17,6 +17,11 @@ interface PortfolioCategory {
 
 const PhotoVideoService = () => {
   const navigate = useNavigate();
+  
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -175,8 +180,8 @@ const PhotoVideoService = () => {
           <div className="max-w-5xl mx-auto mb-20">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-primary" />
+                <div className="flex items-baseline gap-1">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
                 <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   Что входит в услугу
@@ -195,7 +200,7 @@ const PhotoVideoService = () => {
                   description: "Генерация уникального визуального контента с учетом корпоративного стиля"
                 },
                 {
-                  icon: <Sparkles className="w-6 h-6 text-blue-600" />,
+                  icon: <Camera className="w-6 h-6 text-blue-600" />,
                   title: "Контент для соцсетей и рекламы",
                   description: "Создание привлекательного контента для всех популярных платформ"
                 },
@@ -591,10 +596,10 @@ const PhotoVideoService = () => {
           <div id="order-form" className="max-w-2xl mx-auto mt-20">
             <div className="text-center mb-8">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-primary" />
+                <div className="flex items-baseline gap-1">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
                   Обсудим ваш проект
                 </h2>
               </div>

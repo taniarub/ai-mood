@@ -2,21 +2,17 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Zap, Globe, Smartphone, Rocket, CheckCircle, Sparkles, Users, Monitor, Code2, Settings, Send, AlertCircle } from "lucide-react";
+import { ArrowLeft, Zap, Globe, Smartphone, Rocket, CheckCircle, Send, AlertCircle, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
-import { useState } from "react";
-
-interface PortfolioCategory {
-  id: string;
-  title: string;
-  description: string;
-  imageCount: number;
-  route: string;
-  icon: React.ReactNode;
-}
+import { useState, useEffect } from "react";
 
 const WebDesignService = () => {
   const navigate = useNavigate();
+  
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -29,17 +25,6 @@ const WebDesignService = () => {
   // Telegram configuration
   const TELEGRAM_BOT_TOKEN = '8017033289:AAFs2Zm2-eU1opGIYYDibKbmLe9bqikNAnI';
   const TELEGRAM_CHAT_ID = '277234658';
-
-  const categories: PortfolioCategory[] = [
-    {
-      id: "landing",
-      title: "Лендинги и сайты",
-      description: "Современные лендинги, корпоративные сайты и интернет-магазины",
-      imageCount: 3,
-      route: "/web-design",
-      icon: <Globe className="w-6 h-6" />
-    }
-  ];
 
   const handleBackToServices = () => {
     navigate('/#services');
@@ -174,8 +159,8 @@ const WebDesignService = () => {
           <div className="max-w-5xl mx-auto mb-20">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-primary" />
+                <div className="flex items-baseline gap-1">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
                 <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   Что входит в услугу
@@ -211,7 +196,7 @@ const WebDesignService = () => {
                   description: "Подключение аналитики, форм обратной связи, онлайн-чатов и платежных систем"
                 },
                 {
-                  icon: <Sparkles className="w-6 h-6 text-rose-600" />,
+                  icon: <CheckCircle className="w-6 h-6 text-rose-600" />,
                   title: "Техническая поддержка",
                   description: "Консультации, обновления, резервное копирование и помощь после запуска"
                 }
@@ -437,10 +422,10 @@ const WebDesignService = () => {
           <div id="order-form" className="max-w-2xl mx-auto mt-20">
             <div className="text-center mb-8">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/30 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-primary" />
+                <div className="flex items-baseline gap-1">
+                  <Sparkles className="w-8 h-8 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold text-foreground mb-4">
                   Обсудим ваш проект
                 </h2>
               </div>

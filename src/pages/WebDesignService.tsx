@@ -187,8 +187,8 @@ const WebDesignService = () => {
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-green-600" />,
-                  title: "Система управления контентом",
-                  description: "Простой и удобный интерфейс для самостоятельного редактирования содержимого"
+                  title: "Тексты и дизайн под ключ",
+                  description: "Создадим привлекательный контент и современный дизайн, даже если у вас нет идей или готовых материалов."
                 },
                 {
                   icon: <Zap className="w-6 h-6 text-orange-600" />,
@@ -398,11 +398,11 @@ const WebDesignService = () => {
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src="/images/website/ai.png" alt="Neural Pathways Academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/website/web1.png" alt="Vetka Recreation" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">Neural Pathways Academy</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Лендинг образовательного проекта с чистой типографикой и высокой конверсией</p>
-                  <a href="https://preview--neural-pathways-academy.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                  <h3 className="text-lg font-semibold mb-1">Vetka Recreation</h3>
+                  <p className="text-muted-foreground text-sm mb-2">Сайт рекреационного центра с удобной навигацией и бронированием</p>
+                  <a href="https://vetka-recreation.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
             </div>

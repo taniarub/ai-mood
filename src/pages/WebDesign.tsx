@@ -6,6 +6,7 @@ const WebDesign = () => {
     <>
       <Header />
       <PortfolioGallery
+        category="web-design"
         title="Лендинги и сайты"
         description="Современные сайты, лендинги и удобные интерфейсы с высокой конверсией"
         initialWorks={[
@@ -45,6 +46,13 @@ const WebDesign = () => {
             description: 'Современный сайт студии пилатеса с элегантным дизайном и удобной записью на занятия',
             image: '/images/website/pilates.png',
             url: 'https://pilates-labspace-clone.lovable.app'
+          },
+          {
+            id: 'vetka',
+            title: 'Vetka Recreation',
+            description: 'Сайт рекреационного центра с удобной навигацией и бронированием',
+            image: '/images/website/web1.png',
+            url: 'https://vetka-recreation.lovable.app'
           }
         ]}
       />

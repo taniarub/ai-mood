@@ -465,7 +465,8 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
       navigate('/web-design-service');
     } else if (category === 'Косметика и уход' || category === 'cosmetics' || 
                category === 'Одежда и аксессуары' || category === 'fashion' ||
-               category === 'Предметная съёмка' || category === 'product-photography') {
+               category === 'Предметная съёмка' || category === 'product-photography' ||
+               category === 'Видео' || category === 'video') {
       navigate('/photo-video-service');
     } else {
       // Если категория не определена, возвращаемся на главную страницу к портфолио

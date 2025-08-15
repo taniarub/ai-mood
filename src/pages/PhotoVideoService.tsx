@@ -725,6 +725,18 @@ const PhotoVideoService = () => {
                   </>
                 )}
               </Button>
+              
+              <p className="text-xs text-muted-foreground text-center mt-3">
+                Нажимая кнопку, вы соглашаетесь с{" "}
+                <a 
+                  href="/privacy-policy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  политикой обработки персональных данных
+                </a>
+              </p>
             </form>
           </div>
         </div>

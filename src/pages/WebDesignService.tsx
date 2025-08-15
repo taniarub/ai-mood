@@ -254,7 +254,7 @@ const WebDesignService = () => {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 300 BYN</span>
+                        <span className="font-bold text-primary">от 200 BYN</span>
                       </div>
                     </div>
                   </div>
@@ -300,7 +300,7 @@ const WebDesignService = () => {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 500 BYN</span>
+                        <span className="font-bold text-primary">от 400 BYN</span>
                       </div>
                     </div>
                   </div>
@@ -343,7 +343,7 @@ const WebDesignService = () => {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 700 BYN</span>
+                        <span className="font-bold text-primary">от 600 BYN</span>
                       </div>
                     </div>
                   </div>
@@ -479,9 +479,9 @@ const WebDesignService = () => {
                   className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
                 >
                   <option value="">Выберите пакет</option>
-                  <option value="quick-start">Быстрый старт (от 300 BYN)</option>
-                  <option value="personal-design">Персональный дизайн (от 500 BYN)</option>
-                  <option value="extended">Расширенный функционал (от 700 BYN)</option>
+                  <option value="quick-start">Быстрый старт (от 200 BYN)</option>
+                  <option value="personal-design">Персональный дизайн (от 400 BYN)</option>
+                  <option value="extended">Расширенный функционал (от 600 BYN)</option>
                 </select>
               </div>
 
@@ -527,6 +527,18 @@ const WebDesignService = () => {
                   </>
                 )}
               </Button>
+              
+              <p className="text-xs text-muted-foreground text-center mt-3">
+                Нажимая кнопку, вы соглашаетесь с{" "}
+                <a 
+                  href="/privacy-policy" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  политикой обработки персональных данных
+                </a>
+              </p>
             </form>
           </div>
         </div>

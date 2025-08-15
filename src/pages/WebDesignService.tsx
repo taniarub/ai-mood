@@ -241,12 +241,14 @@ const WebDesignService = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <p className="text-muted-foreground text-base">
-                      Одностраничный сайт без сложных требований к дизайну
+                    <p className="text-muted-foreground text-base mb-3">
+                      Дизайн по готовому шаблону (с адаптацией под ваш бренд)
                     </p>
-                    <p className="text-muted-foreground text-base mt-3">
-                      Оптимально для быстрого запуска и простого представления услуги или товара
-                    </p>
+                    <ul className="text-muted-foreground text-sm space-y-1">
+                      <li>• До 3 страниц</li>
+                      <li>• Адаптивная верстка</li>
+                      <li>• Настройка формы обратной связи / заявки</li>
+                    </ul>
                     <div className="space-y-2 pt-4 border-t mt-4">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">Срок:</span>
@@ -287,12 +289,16 @@ const WebDesignService = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <p className="text-muted-foreground text-base">
-                      Одностраничный сайт с индивидуальным дизайном и структурой
+                    <p className="text-muted-foreground text-base mb-3">
+                      Индивидуальный дизайн
                     </p>
-                    <p className="text-muted-foreground text-base mt-3">
-                      Детальная проработка макета, контента и визуальных элементов
-                    </p>
+                    <ul className="text-muted-foreground text-sm space-y-1">
+                      <li>• До 7 страниц (главная, услуги/товары, контакты и др.)</li>
+                      <li>• Адаптивная верстка под все устройства</li>
+                      <li>• Настройка форм и мессенджеров (Telegram, WhatsApp, email)</li>
+                      <li>• Базовое SEO</li>
+                      <li>• Написание продающих текстов, даже если нет идей</li>
+                    </ul>
                     <div className="space-y-2 pt-4 border-t mt-4">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">Срок:</span>
@@ -330,12 +336,17 @@ const WebDesignService = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 flex-1 flex flex-col">
                   <div className="flex-1">
-                    <p className="text-muted-foreground text-base">
-                      Всё из «Персональный дизайн» + формы, интеграции, базовая SEO-оптимизация
+                    <p className="text-muted-foreground text-base mb-3">
+                      Полностью индивидуальный дизайн с уникальными элементами
                     </p>
-                    <p className="text-muted-foreground text-base mt-3">
-                      Полнофункциональный сайт с расширенными возможностями и интеграциями
-                    </p>
+                    <ul className="text-muted-foreground text-sm space-y-1">
+                      <li>• Неограниченное количество страниц</li>
+                      <li>• Интернет-магазин с корзиной и оплатой</li>
+                      <li>• Адаптивная верстка и оптимизация скорости загрузки</li>
+                      <li>• Расширенное SEO</li>
+                      <li>• Интеграция с CRM, аналитикой, рекламными инструментами</li>
+                      <li>• Копирайтинг текстов под продающую воронку</li>
+                    </ul>
                     <div className="space-y-2 pt-4 border-t mt-4">
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-muted-foreground">Срок:</span>
@@ -366,6 +377,9 @@ const WebDesignService = () => {
             </div>
             <div className="max-w-6xl mx-auto mt-4 mb-4 text-xs text-muted-foreground text-left">
               Окончательная стоимость зависит от проекта и его сложности
+            </div>
+            <div className="max-w-6xl mx-auto mt-4 mb-4 text-xs text-muted-foreground text-left">
+              Бесплатная техподдержка сайта в течение 1 месяца
             </div>
           </div>
 

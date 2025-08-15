@@ -12,6 +12,14 @@ const PrivacyPolicy = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <>
       <Header />
@@ -21,7 +29,7 @@ const PrivacyPolicy = () => {
           <div className="mb-8">
             <Button 
               variant="outline" 
-              onClick={() => navigate(-1)}
+              onClick={handleBack}
               className="gap-2"
             >
               <ArrowLeft className="w-4 h-4" />

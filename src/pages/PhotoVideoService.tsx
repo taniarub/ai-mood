@@ -570,7 +570,7 @@ const PhotoVideoService = () => {
               {categories.map((category) => (
                 <Card 
                   key={category.id}
-                  className="group cursor-pointer bg-card border border-transparent hover:border-primary/60 hover:shadow-[0_2px_16px_rgba(139,92,246,0.10)] transition-all rounded-3xl"
+                  className="group cursor-pointer bg-card border border-border hover:border-primary/60 hover:shadow-[0_2px_16px_rgba(139,92,246,0.10)] transition-all rounded-3xl"
                   onClick={() => handleCategoryClick(category.route)}
                 >
                   <CardHeader className="text-center">

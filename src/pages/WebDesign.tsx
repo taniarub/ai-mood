@@ -15,7 +15,8 @@ const WebDesign = () => {
             title: 'Neural Pathways Academy',
             description: 'Лендинг образовательного проекта с чистой типографикой и высокой конверсией',
             image: '/images/website/ai.png',
-            url: 'https://preview--neural-pathways-academy.lovable.app'
+            url: 'https://preview--neural-pathways-academy.lovable.app',
+            category: 'website'
           },
           {
             id: 'any',
@@ -30,7 +31,7 @@ const WebDesign = () => {
             title: 'Mon Amour Flowers',
             description: 'Современный сайт цветочного магазина с элегантным дизайном',
             image: '/images/website/flower.png',
-            url: 'https://mon-amour-flowers.lovable.app/',
+            url: 'https://mon-amour-flowers.lovable.app',
             category: 'website'
           },
           {
@@ -38,21 +39,24 @@ const WebDesign = () => {
             title: 'Language School',
             description: 'Лендинг языковой школы',
             image: '/images/website/shool.png',
-            url: 'https://language-school-clone.lovable.app/'
+            url: 'https://language-school-clone.lovable.app/',
+            category: 'website'
           },
           {
             id: 'pilates',
             title: 'Pilates LabSpace',
             description: 'Современный сайт студии пилатеса с элегантным дизайном и удобной записью на занятия',
-            image: '/images/website/pilates.png',
-            url: 'https://pilates-labspace-clone.lovable.app'
+            image: '/images/website/pil.png',
+            url: 'https://pilates-labspace-clone.lovable.app',
+            category: 'website'
           },
           {
             id: 'vetka',
             title: 'Vetka Recreation',
             description: 'Сайт рекреационного центра с удобной навигацией и бронированием',
             image: '/images/website/web1.png',
-            url: 'https://vetka-recreation.lovable.app'
+            url: 'https://vetka-recreation.lovable.app',
+            category: 'website'
           }
         ]}
       />

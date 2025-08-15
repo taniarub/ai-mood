@@ -450,7 +450,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             description: 'Современный сайт цветочного магазина с элегантным дизайном и удобной навигацией',
             image: '/images/Лендинги и сайты/Screenshot 2025-08-09 at 19.54.05.png',
             category: 'Лендинги и сайты',
-            url: 'https://mon-amour-flowers.lovable.app/'
+            url: 'https://mon-amour-flowers.lovable.app'
           }
         );
         break;

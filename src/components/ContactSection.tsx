@@ -16,7 +16,7 @@ const ContactSection = () => {
 
   // ⚠️ ВАЖНО: В production переместите токен на backend!
   const TELEGRAM_BOT_TOKEN = '8017033289:AAFs2Zm2-eU1opGIYYDibKbmLe9bqikNAnI';
-  const TELEGRAM_CHAT_ID = '277234658'; // ✅ Chat ID настроен!
+  const TELEGRAM_CHAT_ID = '@laura_palmers_theme'; // ✅ Chat ID настроен!
 
   useEffect(() => {
     const observer = new IntersectionObserver(

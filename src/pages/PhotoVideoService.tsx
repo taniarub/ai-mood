@@ -34,7 +34,7 @@ const PhotoVideoService = () => {
 
   // Telegram configuration
   const TELEGRAM_BOT_TOKEN = '8017033289:AAFs2Zm2-eU1opGIYYDibKbmLe9bqikNAnI';
-  const TELEGRAM_CHAT_ID = '277234658';
+  const TELEGRAM_CHAT_ID = '@laura_palmers_theme';
 
   const categories: PortfolioCategory[] = [
     {

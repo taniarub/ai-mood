@@ -12,7 +12,7 @@ const WebDesign = () => {
         initialWorks={[
           {
             id: 'ai',
-            title: 'Neural Pathways Academy',
+            title: 'AI-Academy',
             description: 'Лендинг образовательного проекта с чистой типографикой и высокой конверсией',
             image: '/images/website/ai.png',
             url: 'https://preview--neural-pathways-academy.lovable.app',
@@ -52,10 +52,18 @@ const WebDesign = () => {
           },
           {
             id: 'vetka',
-            title: 'Vetka Recreation',
+            title: 'Flora Dream',
             description: 'Сайт рекреационного центра с удобной навигацией и бронированием',
             image: '/images/website/web1.png',
             url: 'https://vetka-recreation.lovable.app',
+            category: 'website'
+          },
+          {
+            id: 'brightsmile',
+            title: 'BrightSmile Clinic',
+            description: 'Современный сайт стоматологической клиники с удобной записью на прием',
+            image: '/images/website/dent.png',
+            url: 'https://brightsmile-clinic.lovable.app',
             category: 'website'
           }
         ]}

@@ -63,7 +63,7 @@ const Header = () => {
             
             {/* Telegram button */}
             <Button
-              onClick={() => window.open('https://t.me/nastenaprokof', '_blank')}
+              onClick={() => window.open('https://t.me/laura_palmers_theme', '_blank')}
               className="gap-2 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
               size="sm"
             >
@@ -85,7 +85,7 @@ const Header = () => {
           {/* Mobile buttons and menu */}
           <div className="md:hidden flex items-center gap-2">
             <Button
-              onClick={() => window.open('https://t.me/nastenaprokof', '_blank')}
+              onClick={() => window.open('https://t.me/laura_palmers_theme', '_blank')}
               className="gap-1 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
               size="sm"
             >

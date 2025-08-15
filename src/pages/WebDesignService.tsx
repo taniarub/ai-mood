@@ -24,7 +24,7 @@ const WebDesignService = () => {
 
   // Telegram configuration
   const TELEGRAM_BOT_TOKEN = '8017033289:AAFs2Zm2-eU1opGIYYDibKbmLe9bqikNAnI';
-  const TELEGRAM_CHAT_ID = '@laura_palmers_theme';
+  const TELEGRAM_CHAT_ID = '277234658';
 
   const handleBackToServices = () => {
     navigate('/#services');
@@ -382,11 +382,11 @@ const WebDesignService = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src="/images/website/flower.png" alt="Mon Amour Flowers" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/website/ai.png" alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">Mon Amour Flowers</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Современный сайт цветочного магазина с элегантным дизайном</p>
-                  <a href="https://mon-amour-flowers.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                  <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
+                  <p className="text-muted-foreground text-sm mb-2">Лендинг образовательного проекта с чистой типографикой и высокой конверсией</p>
+                  <a href="https://preview--neural-pathways-academy.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
@@ -398,10 +398,10 @@ const WebDesignService = () => {
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src="/images/website/web1.png" alt="Vetka Recreation" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/website/web1.png" alt="Flora Dream" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">Vetka Recreation</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Сайт рекреационного центра с удобной навигацией и бронированием</p>
+                  <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
+                  <p className="text-muted-foreground text-sm mb-2">Элегантный сайт флористической студии с удобной навигацией и бронированием</p>
                   <a href="https://vetka-recreation.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>

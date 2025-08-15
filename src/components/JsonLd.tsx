@@ -19,7 +19,7 @@ const JsonLd = ({ type = 'organization' }: JsonLdProps) => {
         "availableLanguage": ["Russian"]
       },
       "sameAs": [
-        "https://t.me/your_telegram"
+        "https://t.me/laura_palmers_theme"
       ],
       "areaServed": "RU",
       "serviceType": [

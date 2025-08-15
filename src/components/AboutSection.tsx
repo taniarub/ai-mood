@@ -32,7 +32,7 @@ const AboutSection = () => {
           </h2>
 
           <p className="fade-in-up text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
-          Мы создаём фото, видео и сайты с помощью нейросетей
+          Мы создаём <span className="text-emerald-600 font-semibold">фото</span>, <span className="text-blue-600 font-semibold">видео</span> и <span className="text-purple-600 font-semibold">сайты</span> с помощью нейросетей
           </p>
 
           <p className="fade-in-up text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">

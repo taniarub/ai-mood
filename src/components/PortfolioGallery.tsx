@@ -430,7 +430,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
         images.push(
           {
             id: 'web1',
-            title: 'Neural Pathways Academy',
+            title: 'AI-Academy',
             description: 'Лендинг образовательного проекта с чистой типографикой, ясной структурой и высокой конверсией',
             image: '/images/Лендинги и сайты/Screenshot 2025-08-09 at 19.46.53.png',
             category: 'Лендинги и сайты',
@@ -497,11 +497,6 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {description}
           </p>
-          {category && (
-            <Badge variant="secondary" className="text-primary">
-              {category}
-            </Badge>
-          )}
         </div>
 
         {/* Works gallery */}
@@ -551,9 +546,6 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
                   <h3 className="text-base font-semibold text-foreground mb-2">
                     {work.title}
                   </h3>
-                  <p className="text-muted-foreground text-xs mb-3 line-clamp-2">
-                    {work.description}
-                  </p>
                   {work.url && (
                     <a
                       href={work.url}

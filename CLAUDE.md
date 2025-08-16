@@ -29,20 +29,20 @@ This is a React portfolio website built with modern tools, following a service-b
 - `src/components/ui/` - shadcn/ui component library
 - `src/hooks/` - Custom React hooks
 - `src/lib/` - Utility functions and configurations
-- `public/images/` - Image assets organized by service categories (одежда-и-аксессуары, косметика-и-уход, Предметная съёмка)
+- `public/images/` - Image assets organized by service categories (clothes, makeup, objects)
 
 ### Key Architecture Patterns
 - Page-based routing with dedicated service pages
 - Component composition with shadcn/ui design system
 - Alias imports using `@/` prefix for src directory
-- Russian language content and folder structure for image organization
+- Russian language content with English folder structure for image organization
 - Responsive design with Tailwind breakpoints
 
 ### Image Organization
-Images are categorized by service type in Russian:
-- `одежда-и-аксессуары/` - Fashion and accessories
-- `косметика-и-уход/` - Cosmetics and skincare  
-- `Предметная съёмка/` - Product photography
+Images are categorized by service type:
+- `clothes/` - Fashion and accessories
+- `makeup/` - Cosmetics and skincare  
+- `objects/` - Product photography
 
 ### Styling Conventions
 - Uses CSS custom properties for theming

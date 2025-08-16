@@ -36,7 +36,7 @@ const WebDesignService = () => {
 
   const sendToTelegram = async (data: typeof formData) => {
     const message = `
-🎯 *НОВАЯ ЗАЯВКА НА САЙТ С MOODAI*
+🎯 *НОВАЯ ЗАЯВКА НА САЙТ С DREAM AI*
 
 👤 *Имя:* ${data.name}
 📱 *Телефон:* ${data.phone}

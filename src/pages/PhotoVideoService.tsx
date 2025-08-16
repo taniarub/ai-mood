@@ -73,7 +73,7 @@ const PhotoVideoService = () => {
 
   const sendToTelegram = async (data: typeof formData) => {
     const message = `
-🎯 *НОВАЯ ЗАЯВКА НА ФОТО/ВИДЕО С MOODAI*
+🎯 *НОВАЯ ЗАЯВКА НА ФОТО/ВИДЕО С DREAM AI*
 
 👤 *Имя:* ${data.name}
 📱 *Телефон:* ${data.phone}

@@ -38,7 +38,7 @@ const ContactSection = () => {
 
   const sendToTelegram = async (data: typeof formData) => {
     const message = `
-🎯 *НОВАЯ ЗАЯВКА С САЙТА MOODAI*
+🎯 *НОВАЯ ЗАЯВКА С САЙТА DREAM AI*
 
 👤 *Имя:* ${data.name}
 📧 *Email:* ${data.email}
@@ -49,7 +49,7 @@ const ContactSection = () => {
 ${data.message}
 
 ⏰ *Время:* ${new Date().toLocaleString('ru-RU')}
-🌐 *Источник:* Сайт MoodAI
+🌐 *Источник:* Сайт Dream AI
     `.trim();
 
     try {

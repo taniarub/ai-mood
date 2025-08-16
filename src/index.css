@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* MoodAI Design System - Violet and purple theme */
+/* Dream AI Design System - Violet and purple theme */
 
 @layer base {
   :root {
@@ -121,7 +121,7 @@
 }
 
 @layer components {
-  /* Custom utility classes for MoodAI */
+  /* Custom utility classes for Dream AI */
   .gradient-primary {
     background: var(--gradient-primary);
   }

@@ -42,7 +42,7 @@ const Header = () => {
               }
             }}
           >
-            MoodAI
+            Dream AI
           </div>
 
           {/* Navigation and CTA */}

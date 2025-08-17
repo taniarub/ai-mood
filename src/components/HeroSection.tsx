@@ -33,7 +33,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Improved subtitle with icon */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
             Уникальные фото, видео и сайты с помощью искусственного интеллекта
           </h2>
 

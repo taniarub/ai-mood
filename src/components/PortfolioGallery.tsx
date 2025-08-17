@@ -577,21 +577,6 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
           </p>
         </div>
 
-        {/* Category navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((cat) => (
-            <Button
-              key={cat.name}
-              variant={category.toLowerCase() === cat.name.toLowerCase() ? "default" : "outline"}
-              onClick={() => handleCategoryClick(cat.route)}
-              className="gap-2"
-            >
-              <span>{cat.emoji}</span>
-              {cat.name}
-            </Button>
-          ))}
-        </div>
-
         {/* Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {works.map((work) => (

@@ -5,6 +5,69 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { X, Eye, ArrowLeft, ExternalLink } from "lucide-react";
 
+// Makeup images
+import makeupImg from "@/assets/images/makeup/img.png";
+import makeupImg1 from "@/assets/images/makeup/img (1).png";
+import makeupImg2 from "@/assets/images/makeup/img (2).png";
+import makeupImg3 from "@/assets/images/makeup/img (3).png";
+import makeupImg4 from "@/assets/images/makeup/img (4).png";
+import makeupImg5 from "@/assets/images/makeup/img (5).png";
+import makeupHello from "@/assets/images/makeup/hello.jpg";
+import makeupHello1 from "@/assets/images/makeup/hello1.jpg";
+import makeupScreenshot1 from "@/assets/images/makeup/Screenshot 2025-07-03 at 20.18.55.png";
+import makeupScreenshot2 from "@/assets/images/makeup/Screenshot 2025-07-26 at 23.24.18.png";
+import makeupScreenshot3 from "@/assets/images/makeup/Screenshot 2025-07-26 at 23.24.35.png";
+import makeupScreenshot4 from "@/assets/images/makeup/Screenshot 2025-07-26 at 23.28.42.png";
+
+// Clothes images
+import clothesModel1 from "@/assets/images/clothes/model1.png";
+import clothesGlasses from "@/assets/images/clothes/glasses.png";
+import clothesGirlDress from "@/assets/images/clothes/girl cherry dress.png";
+import clothesF0d4c14e from "@/assets/images/clothes/f0d4c14e-797b-4f13-8a22-232efbbe78ab.png";
+import clothesF4d8c9aa from "@/assets/images/clothes/f4d8c9aa-a542-49a0-87df-43e305db93c4.png";
+import clothesScreenshot1 from "@/assets/images/clothes/Screenshot 2025-06-24 at 15.27.18.png";
+import clothesScreenshot2 from "@/assets/images/clothes/Screenshot 2025-06-24 at 15.35.44.png";
+import clothesScreenshot3 from "@/assets/images/clothes/Screenshot 2025-06-24 at 15.35.56.png";
+import clothesScreenshot4 from "@/assets/images/clothes/Screenshot 2025-06-26 at 00.00.03.png";
+import clothesScreenshot5 from "@/assets/images/clothes/Screenshot 2025-07-03 at 20.20.31.png";
+import clothesScreenshot6 from "@/assets/images/clothes/Screenshot 2025-07-03 at 20.20.36.png";
+import clothesScreenshot7 from "@/assets/images/clothes/Screenshot 2025-07-03 at 20.20.44.png";
+import clothesScreenshot8 from "@/assets/images/clothes/Screenshot 2025-07-03 at 20.20.52.png";
+import clothesScreenshot9 from "@/assets/images/clothes/Screenshot 2025-07-03 at 20.21.03.png";
+import clothesScreenshot10 from "@/assets/images/clothes/Screenshot 2025-07-20 at 15.49.56.png";
+import clothesScreenshot11 from "@/assets/images/clothes/Screenshot 2025-07-20 at 15.52.59.png";
+import clothesScreenshot12 from "@/assets/images/clothes/Screenshot 2025-07-20 at 15.53.05.png";
+import clothesScreenshot13 from "@/assets/images/clothes/Screenshot 2025-07-20 at 16.09.24.png";
+import clothesScreenshot14 from "@/assets/images/clothes/Screenshot 2025-07-20 at 22.30.26.png";
+import clothesScreenshot15 from "@/assets/images/clothes/Screenshot 2025-07-20 at 22.30.26 copy.png";
+import clothesScreenshot16 from "@/assets/images/clothes/Screenshot 2025-07-20 at 22.30.32.png";
+import clothesScreenshot17 from "@/assets/images/clothes/Screenshot 2025-07-20 at 22.33.50.png";
+import clothesScreenshot18 from "@/assets/images/clothes/Screenshot 2025-07-20 at 22.59.24.png";
+import clothesScreenshot19 from "@/assets/images/clothes/Screenshot 2025-07-20 at 22.59.40.png";
+import clothesScreenshot20 from "@/assets/images/clothes/Screenshot 2025-07-20 at 23.02.50.png";
+import clothesScreenshot21 from "@/assets/images/clothes/Screenshot 2025-07-20 at 23.03.29.png";
+
+// Objects images
+import object1 from "@/assets/images/objects/1.png";
+import object2 from "@/assets/images/objects/2.png";
+import object3 from "@/assets/images/objects/3.png";
+import object4 from "@/assets/images/objects/4.png";
+import object5 from "@/assets/images/objects/5.png";
+import object6 from "@/assets/images/objects/6.png";
+import object7 from "@/assets/images/objects/7.png";
+import object8 from "@/assets/images/objects/8.png";
+import object9 from "@/assets/images/objects/9.png";
+import object10 from "@/assets/images/objects/10.png";
+import object11 from "@/assets/images/objects/11.png";
+import object12 from "@/assets/images/objects/12.png";
+import object13 from "@/assets/images/objects/13.png";
+import object14 from "@/assets/images/objects/14.png";
+
+// Website images
+import websiteAi from "@/assets/images/website/ai.png";
+import websiteAny from "@/assets/images/website/any.png";
+import websiteFlower from "@/assets/images/website/flower.png";
+
 interface WorkItem {
   id: string;
   title: string;
@@ -50,536 +113,554 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             id: 'cosm1',
             title: 'Косметические продукты - Серия 1',
             description: 'Профессиональная съемка косметических средств с акцентом на качество и детали',
-            image: '/images/makeup/img.png',
+            image: makeupImg,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm2',
             title: 'Косметические продукты - Серия 2',
             description: 'Стильная презентация средств по уходу за кожей',
-            image: '/images/makeup/img (1).png',
+            image: makeupImg1,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm3',
             title: 'Косметические продукты - Серия 3',
             description: 'Элегантная съемка декоративной косметики',
-            image: '/images/makeup/img (2).png',
+            image: makeupImg2,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm4',
             title: 'Косметические продукты - Серия 4',
             description: 'Профессиональная фотосессия средств по уходу',
-            image: '/images/makeup/img (3).png',
+            image: makeupImg3,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm5',
             title: 'Косметические продукты - Серия 5',
             description: 'Современная съемка косметических брендов',
-            image: '/images/makeup/img (4).png',
+            image: makeupImg4,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm6',
             title: 'Косметические продукты - Серия 6',
             description: 'Креативная презентация косметических средств',
-            image: '/images/makeup/img (5).png',
+            image: makeupImg5,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm7',
             title: 'Косметические продукты - Фото 1',
             description: 'Профессиональная съемка косметики',
-            image: '/images/makeup/hello.jpg',
+            image: makeupHello,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm8',
             title: 'Косметические продукты - Фото 2',
-            description: 'Стильная презентация косметических средств',
-            image: '/images/makeup/hello1.jpg',
+            description: 'Стильная презентация beauty-продуктов',
+            image: makeupHello1,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm9',
-            title: 'Косметические продукты - Скриншот 1',
-            description: 'Профессиональная съемка косметики',
-            image: '/images/makeup/Screenshot 2025-07-03 at 20.18.55.png',
+            title: 'Косметические продукты - Естественность',
+            description: 'Естественная красота и элегантность',
+            image: makeupScreenshot1,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm10',
-            title: 'Косметические продукты - Скриншот 2',
-            description: 'Современная презентация косметических средств',
-            image: '/images/makeup/Screenshot 2025-07-26 at 23.24.18.png',
+            title: 'Косметические продукты - Стиль 1',
+            description: 'Модная съемка косметических товаров',
+            image: makeupScreenshot2,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm11',
-            title: 'Косметические продукты - Скриншот 3',
-            description: 'Элегантная съемка косметики',
-            image: '/images/makeup/Screenshot 2025-07-26 at 23.24.35.png',
+            title: 'Косметические продукты - Стиль 2',
+            description: 'Креативная подача beauty-брендов',
+            image: makeupScreenshot3,
             category: 'Косметика и уход'
           },
           {
             id: 'cosm12',
-            title: 'Косметические продукты - Скриншот 4',
-            description: 'Профессиональная фотосессия косметических средств',
-            image: '/images/makeup/Screenshot 2025-07-26 at 23.28.42.png',
+            title: 'Косметические продукты - Премиум',
+            description: 'Премиальная презентация косметики',
+            image: makeupScreenshot4,
             category: 'Косметика и уход'
           }
         );
         break;
-        
+
       case 'одежда и аксессуары':
+      case 'clothes':
       case 'fashion':
         images.push(
           {
-            id: 'fashion1',
-            title: 'Модная фотосессия - Модель 1',
-            description: 'Современная фотосессия с профессиональной моделью',
-            image: '/images/clothes/model1.png',
+            id: 'fash1',
+            title: 'Модная одежда - Коллекция 1',
+            description: 'Стильная фотосессия одежды с акцентом на детали и качество',
+            image: clothesModel1,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion2',
-            title: 'Стильные очки',
-            description: 'Элегантная презентация аксессуаров',
-            image: '/images/clothes/glasses.png',
+            id: 'fash2',
+            title: 'Аксессуары - Очки',
+            description: 'Элегантная съемка модных аксессуаров',
+            image: clothesGlasses,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion3',
-            title: 'Девушка в вишневом платье',
-            description: 'Романтичная фотосессия в стильной одежде',
-            image: '/images/clothes/girl cherry dress.png',
+            id: 'fash3',
+            title: 'Платье - Вишневый стиль',
+            description: 'Романтичный образ в вишневом платье',
+            image: clothesGirlDress,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion4',
-            title: 'Модная фотосессия - Серия 1',
-            description: 'Современная съемка модной одежды',
-            image: '/images/clothes/f0d4c14e-797b-4f13-8a22-232efbbe78ab.png',
+            id: 'fash4',
+            title: 'Модная одежда - Коллекция 2',
+            description: 'Современная мода и стиль',
+            image: clothesF0d4c14e,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion5',
-            title: 'Модная фотосессия - Серия 2',
-            description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/f4d8c9aa-a542-49a0-87df-43e305db93c4.png',
+            id: 'fash5',
+            title: 'Модная одежда - Коллекция 3',
+            description: 'Трендовые образы сезона',
+            image: clothesF4d8c9aa,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion6',
-            title: 'Модная фотосессия - Скриншот 1',
-            description: 'Современная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-06-24 at 15.27.18.png',
+            id: 'fash6',
+            title: 'Летняя коллекция - Стиль 1',
+            description: 'Летние образы и легкие ткани',
+            image: clothesScreenshot1,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion7',
-            title: 'Модная фотосессия - Скриншот 2',
-            description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-06-24 at 15.35.44.png',
+            id: 'fash7',
+            title: 'Летняя коллекция - Стиль 2',
+            description: 'Яркие и свежие летние образы',
+            image: clothesScreenshot2,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion8',
-            title: 'Модная фотосессия - Скриншот 3',
-            description: 'Элегантная презентация модной одежды',
-            image: '/images/clothes/Screenshot 2025-06-24 at 15.35.56.png',
+            id: 'fash8',
+            title: 'Летняя коллекция - Стиль 3',
+            description: 'Комфорт и элегантность в летнем стиле',
+            image: clothesScreenshot3,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion9',
-            title: 'Модная фотосессия - Скриншот 4',
-            description: 'Современная съемка стильных образов',
-            image: '/images/clothes/Screenshot 2025-06-26 at 00.00.03.png',
+            id: 'fash9',
+            title: 'Летняя коллекция - Стиль 4',
+            description: 'Модные тенденции летнего сезона',
+            image: clothesScreenshot4,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion10',
-            title: 'Модная фотосессия - Скриншот 5',
-            description: 'Профессиональная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.31.png',
+            id: 'fash10',
+            title: 'Стильная одежда - Образ 1',
+            description: 'Современный и стильный look',
+            image: clothesScreenshot5,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion11',
-            title: 'Модная фотосессия - Скриншот 6',
-            description: 'Стильная презентация модных образов',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.36.png',
+            id: 'fash11',
+            title: 'Стильная одежда - Образ 2',
+            description: 'Элегантность в каждой детали',
+            image: clothesScreenshot6,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion12',
-            title: 'Модная фотосессия - Скриншот 7',
-            description: 'Элегантная съемка современной одежды',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.44.png',
+            id: 'fash12',
+            title: 'Стильная одежда - Образ 3',
+            description: 'Изысканный стиль и комфорт',
+            image: clothesScreenshot7,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion13',
-            title: 'Модная фотосессия - Скриншот 8',
-            description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.52.png',
+            id: 'fash13',
+            title: 'Стильная одежда - Образ 4',
+            description: 'Модный и актуальный образ',
+            image: clothesScreenshot8,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion14',
-            title: 'Модная фотосессия - Скриншот 9',
-            description: 'Современная фотосессия стильной одежды',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.21.03.png',
+            id: 'fash14',
+            title: 'Стильная одежда - Образ 5',
+            description: 'Креативный подход к fashion-съемке',
+            image: clothesScreenshot9,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion15',
-            title: 'Модная фотосессия - Скриншот 10',
-            description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 15.49.56.png',
+            id: 'fash15',
+            title: 'Модная коллекция - Летний стиль 1',
+            description: 'Свежий взгляд на летнюю моду',
+            image: clothesScreenshot10,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion16',
-            title: 'Модная фотосессия - Скриншот 11',
-            description: 'Элегантная презентация современной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 15.52.59.png',
+            id: 'fash16',
+            title: 'Модная коллекция - Летний стиль 2',
+            description: 'Легкость и воздушность в одежде',
+            image: clothesScreenshot11,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion17',
-            title: 'Модная фотосессия - Скриншот 12',
-            description: 'Стильная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 15.53.05.png',
+            id: 'fash17',
+            title: 'Модная коллекция - Летний стиль 3',
+            description: 'Яркие краски летнего гардероба',
+            image: clothesScreenshot12,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion18',
-            title: 'Модная фотосессия - Скриншот 13',
-            description: 'Профессиональная фотосессия современной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 16.09.24.png',
+            id: 'fash18',
+            title: 'Модная коллекция - Летний стиль 4',
+            description: 'Стиль и комфорт в одном образе',
+            image: clothesScreenshot13,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion19',
-            title: 'Модная фотосессия - Скриншот 14',
-            description: 'Современная съемка стильных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.30.26.png',
+            id: 'fash19',
+            title: 'Вечерняя коллекция - Образ 1',
+            description: 'Элегантные вечерние образы',
+            image: clothesScreenshot14,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion20',
-            title: 'Модная фотосессия - Скриншот 15',
-            description: 'Элегантная презентация модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.30.26 copy.png',
+            id: 'fash20',
+            title: 'Вечерняя коллекция - Образ 2',
+            description: 'Изысканность и роскошь',
+            image: clothesScreenshot15,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion21',
-            title: 'Модная фотосессия - Скриншот 16',
-            description: 'Профессиональная съемка современных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.30.32.png',
+            id: 'fash21',
+            title: 'Вечерняя коллекция - Образ 3',
+            description: 'Стильные решения для особых случаев',
+            image: clothesScreenshot16,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion22',
-            title: 'Модная фотосессия - Скриншот 17',
-            description: 'Стильная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.33.50.png',
+            id: 'fash22',
+            title: 'Вечерняя коллекция - Образ 4',
+            description: 'Гламур и элегантность',
+            image: clothesScreenshot17,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion23',
-            title: 'Модная фотосессия - Скриншот 18',
-            description: 'Современная съемка элегантных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.59.24.png',
+            id: 'fash23',
+            title: 'Вечерняя коллекция - Образ 5',
+            description: 'Роскошные вечерние наряды',
+            image: clothesScreenshot18,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion24',
-            title: 'Модная фотосессия - Скриншот 19',
-            description: 'Профессиональная презентация модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.59.40.png',
+            id: 'fash24',
+            title: 'Вечерняя коллекция - Образ 6',
+            description: 'Утонченный стиль для особых моментов',
+            image: clothesScreenshot19,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion25',
-            title: 'Модная фотосессия - Скриншот 20',
-            description: 'Элегантная съемка стильных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 23.02.50.png',
+            id: 'fash25',
+            title: 'Вечерняя коллекция - Образ 7',
+            description: 'Идеальный образ для торжественных событий',
+            image: clothesScreenshot20,
             category: 'Одежда и аксессуары'
           },
           {
-            id: 'fashion26',
-            title: 'Модная фотосессия - Скриншот 21',
-            description: 'Современная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 23.03.29.png',
+            id: 'fash26',
+            title: 'Вечерняя коллекция - Образ 8',
+            description: 'Завершающий штрих элегантности',
+            image: clothesScreenshot21,
             category: 'Одежда и аксессуары'
           }
         );
         break;
 
-      case 'предметная съёмка':
-      case 'product-photography':
+      case 'товары и предметы':
+      case 'objects':
+      case 'products':
         images.push(
           {
-            id: 'product1',
-            title: 'Предметная съемка - Косметика с моделью',
-            description: 'Профессиональная съемка косметических продуктов с участием модели',
-            image: '/images/objects/1.png',
-            category: 'Предметная съёмка'
+            id: 'obj1',
+            title: 'Предметная съемка - Товар 1',
+            description: 'Профессиональная съемка товаров для каталога',
+            image: object1,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product2',
-            title: 'Предметная съемка - Презентация продукта',
-            description: 'Элегантная презентация косметического продукта с моделью',
-            image: '/images/objects/2.png',
-            category: 'Предметная съёмка'
+            id: 'obj2',
+            title: 'Предметная съемка - Товар 2',
+            description: 'Качественная презентация продукции',
+            image: object2,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product3',
-            title: 'Предметная съемка - Спортивное питание',
-            description: 'Съемка спортивных добавок и протеинов для фитнес-брендов',
-            image: '/images/objects/3.png',
-            category: 'Предметная съёмка'
+            id: 'obj3',
+            title: 'Предметная съемка - Товар 3',
+            description: 'Детализированная съемка предметов',
+            image: object3,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product4',
-            title: 'Предметная съемка - Lifestyle интерьер',
-            description: 'Атмосферная съемка предметов в интерьерном стиле',
-            image: '/images/objects/4.png',
-            category: 'Предметная съёмка'
+            id: 'obj4',
+            title: 'Предметная съемка - Товар 4',
+            description: 'Стильная подача товаров',
+            image: object4,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product5',
-            title: 'Предметная съемка - Солнцезащитные очки',
-            description: 'Стильная презентация аксессуаров на природе',
-            image: '/images/objects/5.png',
-            category: 'Предметная съёмка'
+            id: 'obj5',
+            title: 'Предметная съемка - Товар 5',
+            description: 'Элегантная презентация изделий',
+            image: object5,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product6',
-            title: 'Предметная съемка - Работа 6',
-            description: 'Стильная съемка предметов с акцентом на бренд',
-            image: '/images/objects/6.png',
-            category: 'Предметная съёмка'
+            id: 'obj6',
+            title: 'Предметная съемка - Товар 6',
+            description: 'Современный подход к товарной фотографии',
+            image: object6,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product7',
-            title: 'Предметная съемка - Работа 7',
-            description: 'Современная фотография товаров для интернет-магазинов',
-            image: '/images/objects/7.png',
-            category: 'Предметная съёмка'
+            id: 'obj7',
+            title: 'Предметная съемка - Товар 7',
+            description: 'Креативная съемка предметов',
+            image: object7,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product8',
-            title: 'Предметная съемка - Работа 8',
-            description: 'Элегантная презентация предметов с профессиональной подачей',
-            image: '/images/objects/8.png',
-            category: 'Предметная съёмка'
+            id: 'obj8',
+            title: 'Предметная съемка - Товар 8',
+            description: 'Профессиональная product-съемка',
+            image: object8,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product9',
-            title: 'Предметная съемка - Работа 9',
-            description: 'Качественная съемка товаров с четким фокусом и освещением',
-            image: '/images/objects/9.png',
-            category: 'Предметная съёмка'
+            id: 'obj9',
+            title: 'Предметная съемка - Товар 9',
+            description: 'Качественная фотография товаров',
+            image: object9,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product10',
-            title: 'Предметная съемка - Работа 10',
-            description: 'Профессиональная фотосъемка предметов для каталогов',
-            image: '/images/objects/10.png',
-            category: 'Предметная съёмка'
+            id: 'obj10',
+            title: 'Предметная съемка - Товар 10',
+            description: 'Стильная презентация продукции',
+            image: object10,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product11',
-            title: 'Предметная съемка - Работа 11',
-            description: 'Современная презентация товаров с высоким качеством изображения',
-            image: '/images/objects/11.png',
-            category: 'Предметная съёмка'
+            id: 'obj11',
+            title: 'Предметная съемка - Товар 11',
+            description: 'Элегантная товарная фотография',
+            image: object11,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product12',
-            title: 'Предметная съемка - Работа 12',
-            description: 'Стильная съемка предметов для рекламных материалов',
-            image: '/images/objects/12.png',
-            category: 'Предметная съёмка'
+            id: 'obj12',
+            title: 'Предметная съемка - Товар 12',
+            description: 'Детальная съемка изделий',
+            image: object12,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product13',
-            title: 'Предметная съемка - Работа 13',
-            description: 'Элегантная фотография товаров с профессиональной обработкой',
-            image: '/images/objects/13.png',
-            category: 'Предметная съёмка'
+            id: 'obj13',
+            title: 'Предметная съемка - Товар 13',
+            description: 'Современная product-фотография',
+            image: object13,
+            category: 'Товары и предметы'
           },
           {
-            id: 'product14',
-            title: 'Предметная съемка - Работа 14',
-            description: 'Качественная презентация предметов для бизнеса',
-            image: '/images/objects/14.png',
-            category: 'Предметная съёмка'
+            id: 'obj14',
+            title: 'Предметная съемка - Товар 14',
+            description: 'Профессиональная съемка для e-commerce',
+            image: object14,
+            category: 'Товары и предметы'
           }
         );
         break;
-        
+
       case 'лендинги и сайты':
       case 'web-design':
+      case 'websites':
         images.push(
           {
             id: 'web1',
             title: 'AI-Academy',
-            description: 'Лендинг образовательного проекта с чистой типографикой, ясной структурой и высокой конверсией',
-            image: '/images/website/ai.png',
-            category: 'Лендинги и сайты',
-            url: 'https://preview--neural-pathways-academy.lovable.app'
+            description: 'Лендинг образовательного проекта с чистой типографикой и высокой конверсией',
+            image: websiteAi,
+            url: 'https://preview--neural-pathways-academy.lovable.app',
+            category: 'Лендинги и сайты'
           },
           {
             id: 'web2',
             title: 'AnyTranslator — AI-переводчик',
-            description: 'Продуктовый сайт с лаконичным дизайном, акцентом на CTA и демонстрацией ценности продукта',
-            image: '/images/website/any.png',
-            category: 'Лендинги и сайты',
-            url: 'https://anytranslator.app/'
+            description: 'Продуктовый сайт с лаконичным дизайном и акцентом на CTA',
+            image: websiteAny,
+            url: 'https://anytranslator.app/',
+            category: 'Лендинги и сайты'
           },
           {
             id: 'web3',
             title: 'Mon Amour Flowers',
-            description: 'Современный сайт цветочного магазина с элегантным дизайном и удобной навигацией',
-            image: '/images/website/flower.png',
-            category: 'Лендинги и сайты',
-            url: 'https://mon-amour-flowers.lovable.app'
+            description: 'Современный сайт цветочного магазина с элегантным дизайном',
+            image: websiteFlower,
+            url: 'https://mon-amour-flowers.lovable.app',
+            category: 'Лендинги и сайты'
           }
         );
+        break;
+
+      default:
         break;
     }
     
     return images;
   }
 
-  const handleBackToPortfolio = () => {
-    // Определяем на какую страницу услуги вернуться в зависимости от категории
-    if (category === 'Лендинги и сайты' || category === 'web-design') {
-      navigate('/web-design-service');
-    } else if (category === 'Косметика и уход' || category === 'cosmetics' || 
-               category === 'Одежда и аксессуары' || category === 'fashion' ||
-               category === 'Предметная съёмка' || category === 'product-photography' ||
-               category === 'Видео' || category === 'video') {
-      navigate('/photo-video-service');
-    } else {
-      // Если категория не определена, возвращаемся на главную страницу к портфолио
-      navigate('/#portfolio');
-    }
+  const handleBackToHome = () => {
+    navigate('/#portfolio');
   };
 
+  const openImageModal = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const closeImageModal = () => {
+    setSelectedImage(null);
+  };
+
+  const handleCategoryClick = (route: string) => {
+    navigate(route);
+  };
+
+  // Категории для навигации
+  const categories = [
+    { name: 'Косметика и уход', route: '/photography', emoji: '💄' },
+    { name: 'Одежда и аксессуары', route: '/photo-video-service', emoji: '👗' },
+    { name: 'Товары и предметы', route: '/product-photography', emoji: '📦' },
+    { name: 'Лендинги и сайты', route: '/web-design', emoji: '💻' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-subtle pt-20">
-      <div className="container mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gradient-subtle pt-24 pb-16">
+      <div className="container mx-auto px-4">
         {/* Back button */}
         <div className="mb-8">
           <Button 
             variant="outline" 
-            onClick={handleBackToPortfolio}
+            onClick={handleBackToHome}
             className="gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Назад к услуге
+            Назад к портфолио
           </Button>
         </div>
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-foreground mb-6">
             {title}
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
             {description}
           </p>
         </div>
 
-        {/* Works gallery */}
-        {works.length === 0 ? (
-          <div className="text-center py-16">
-            <div className="w-24 h-24 mx-auto mb-4 bg-secondary rounded-full flex items-center justify-center">
-              <Eye className="w-8 h-8 text-muted-foreground" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">
-              Пока нет работ в этой категории
-            </h3>
-            <p className="text-muted-foreground">
-              Работы скоро появятся
-            </p>
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {works.map((work) => (
-              <Card key={work.id} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-                <div className="relative overflow-hidden cursor-pointer" onClick={() => setSelectedImage(work.image)}>
-                  <img
-                    src={work.image}
-                    alt={work.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2">
-                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
+        {/* Category navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((cat) => (
+            <Button
+              key={cat.name}
+              variant={category.toLowerCase() === cat.name.toLowerCase() ? "default" : "outline"}
+              onClick={() => handleCategoryClick(cat.route)}
+              className="gap-2"
+            >
+              <span>{cat.emoji}</span>
+              {cat.name}
+            </Button>
+          ))}
+        </div>
+
+        {/* Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {works.map((work) => (
+            <Card key={work.id} className="group overflow-hidden shadow-soft hover:shadow-xl transition-all bg-card border border-border">
+              <div className="relative overflow-hidden">
+                <img
+                  src={work.image}
+                  alt={work.title}
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-4">
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="gap-2"
+                      onClick={() => openImageModal(work.image)}
+                    >
                       <Eye className="w-4 h-4" />
+                      Просмотр
                     </Button>
                     {work.url && (
-                      <a
-                        href={work.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex"
-                        onClick={(e) => e.stopPropagation()}
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="gap-2"
+                        onClick={() => window.open(work.url, '_blank')}
                       >
-                        <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white gap-1">
-                          <ExternalLink className="w-4 h-4" />
-                          На сайт
-                        </Button>
-                      </a>
+                        <ExternalLink className="w-4 h-4" />
+                        Сайт
+                      </Button>
                     )}
                   </div>
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="text-base font-semibold text-foreground mb-2">
-                    {work.title}
-                  </h3>
-                  {work.url && (
-                    <a
-                      href={work.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary text-xs font-medium hover:underline"
-                    >
-                      Перейти на сайт →
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        )}
+              </div>
+              <CardContent className="p-6">
+                <div className="mb-2">
+                  <Badge variant="secondary" className="text-xs">
+                    {work.category}
+                  </Badge>
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {work.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {work.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
         {/* Image Modal */}
         {selectedImage && (
-          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
             <div className="relative max-w-7xl max-h-full">
-              <img
-                src={selectedImage}
-                alt="Увеличенное изображение"
-                className="max-w-full max-h-full object-contain"
-                onClick={(e) => e.stopPropagation()}
-              />
               <Button
-                variant="outline"
+                variant="secondary"
                 size="sm"
-                className="absolute top-4 right-4 bg-white/90 hover:bg-white"
-                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10"
+                onClick={closeImageModal}
               >
                 <X className="w-4 h-4" />
               </Button>
+              <img
+                src={selectedImage}
+                alt="Просмотр изображения"
+                className="max-w-full max-h-full object-contain"
+              />
             </div>
           </div>
         )}
@@ -588,4 +669,4 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
   );
 };
 
-export default PortfolioGallery; 
+export default PortfolioGallery;

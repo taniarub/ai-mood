@@ -1,5 +1,12 @@
 import PortfolioGallery from "@/components/PortfolioGallery";
 import Header from "@/components/Header";
+import aiImage from "@/assets/images/website/ai.png";
+import anyImage from "@/assets/images/website/any.png";
+import flowerImage from "@/assets/images/website/flower.png";
+import shoolImage from "@/assets/images/website/shool.png";
+import pilImage from "@/assets/images/website/pil.png";
+import web1Image from "@/assets/images/website/web1.png";
+import dentImage from "@/assets/images/website/dent.png";
 
 const WebDesign = () => {
   return (
@@ -14,7 +21,7 @@ const WebDesign = () => {
             id: 'ai',
             title: 'AI-Academy',
             description: 'Лендинг образовательного проекта с чистой типографикой и высокой конверсией',
-            image: '/images/website/ai.png',
+            image: aiImage,
             url: 'https://preview--neural-pathways-academy.lovable.app',
             category: 'website'
           },
@@ -22,7 +29,7 @@ const WebDesign = () => {
             id: 'any',
             title: 'AnyTranslator — AI-переводчик',
             description: 'Продуктовый сайт с лаконичным дизайном и акцентом на CTA',
-            image: '/images/website/any.png',
+            image: anyImage,
             url: 'https://anytranslator.app/',
             category: 'website'
           },
@@ -30,7 +37,7 @@ const WebDesign = () => {
             id: 'flower',
             title: 'Mon Amour Flowers',
             description: 'Современный сайт цветочного магазина с элегантным дизайном',
-            image: '/images/website/flower.png',
+            image: flowerImage,
             url: 'https://mon-amour-flowers.lovable.app',
             category: 'website'
           },
@@ -38,7 +45,7 @@ const WebDesign = () => {
             id: 'school',
             title: 'Language School',
             description: 'Лендинг языковой школы',
-            image: '/images/website/shool.png',
+            image: shoolImage,
             url: 'https://language-school-clone.lovable.app/',
             category: 'website'
           },
@@ -46,7 +53,7 @@ const WebDesign = () => {
             id: 'pilates',
             title: 'Pilates LabSpace',
             description: 'Современный сайт студии пилатеса с элегантным дизайном и удобной записью на занятия',
-            image: '/images/website/pil.png',
+            image: pilImage,
             url: 'https://pilates-labspace-clone.lovable.app',
             category: 'website'
           },
@@ -54,7 +61,7 @@ const WebDesign = () => {
             id: 'vetka',
             title: 'Flora Dream',
             description: 'Сайт рекреационного центра с удобной навигацией и бронированием',
-            image: '/images/website/web1.png',
+            image: web1Image,
             url: 'https://vetka-recreation.lovable.app',
             category: 'website'
           },
@@ -62,7 +69,7 @@ const WebDesign = () => {
             id: 'brightsmile',
             title: 'BrightSmile Clinic',
             description: 'Современный сайт стоматологической клиники с удобной записью на прием',
-            image: '/images/website/dent.png',
+            image: dentImage,
             url: 'https://brightsmile-clinic.lovable.app',
             category: 'website'
           }

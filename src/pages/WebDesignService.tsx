@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Zap, Globe, Smartphone, Rocket, CheckCircle, Send, AlertCircle, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import { useState, useEffect } from "react";
+import aiImage from "@/assets/images/website/ai.png";
+import anyImage from "@/assets/images/website/any.png";
+import web1Image from "@/assets/images/website/web1.png";
 
 const WebDesignService = () => {
   const navigate = useNavigate();
@@ -396,7 +399,7 @@ const WebDesignService = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src="/images/website/ai.png" alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={aiImage} alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
                   <p className="text-muted-foreground text-sm mb-2">Лендинг образовательного проекта с чистой типографикой и высокой конверсией</p>
@@ -404,7 +407,7 @@ const WebDesignService = () => {
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src="/images/website/any.png" alt="AnyTranslator" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={anyImage} alt="AnyTranslator" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">AnyTranslator — AI-переводчик</h3>
                   <p className="text-muted-foreground text-sm mb-2">Продуктовый сайт с лаконичным дизайном и акцентом на CTA</p>
@@ -412,7 +415,7 @@ const WebDesignService = () => {
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src="/images/website/web1.png" alt="Flora Dream" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={web1Image} alt="Flora Dream" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
                   <p className="text-muted-foreground text-sm mb-2">Элегантный сайт флористической студии с удобной навигацией и бронированием</p>

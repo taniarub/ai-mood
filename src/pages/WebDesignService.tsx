@@ -226,8 +226,56 @@ const WebDesignService = () => {
           </div>
 
           
+          {/* Portfolio preview */}
+          <div className="max-w-5xl mx-auto mt-20">
+            <div className="text-center mb-10">
+              <h2 className="text-4xl font-bold text-foreground mb-4">
+                Примеры работ
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Современные сайты и лендинги, реализованные с помощью ИИ и современных технологий
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
+                <img src={aiImage} alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
+                  <p className="text-muted-foreground text-sm mb-2">Лендинг образовательного проекта с чистой типографикой и высокой конверсией</p>
+                  <a href="https://preview--neural-pathways-academy.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
+                <img src={anyImage} alt="AnyTranslator" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-1">AnyTranslator — AI-переводчик</h3>
+                  <p className="text-muted-foreground text-sm mb-2">Продуктовый сайт с лаконичным дизайном и акцентом на CTA</p>
+                  <a href="https://anytranslator.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
+                <img src={web1Image} alt="Flora Dream" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
+                  <p className="text-muted-foreground text-sm mb-2">Элегантный сайт флористической студии с удобной навигацией и бронированием</p>
+                  <a href="https://vetka-recreation.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-10">
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="px-8 py-4 text-lg font-semibold shadow-soft hover:shadow-xl transition-all"
+                onClick={() => handleCategoryClick('/web-design')}
+              >
+                Смотреть больше работ
+              </Button>
+            </div>
+          </div>
+
           {/* Pricing packages */}
-          <div className="max-w-6xl mx-auto mb-20">
+          <div className="max-w-6xl mx-auto mb-20 mt-20">
             <div className="text-center mb-14">
               <h2 className="text-4xl font-bold text-foreground mb-4">
                 Выберите подходящий пакет для вашего проекта
@@ -386,54 +434,6 @@ const WebDesignService = () => {
             </div>
           </div>
 
-
-          {/* Portfolio preview */}
-          <div className="max-w-5xl mx-auto mt-20">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Примеры работ
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Современные сайты и лендинги, реализованные с помощью ИИ и современных технологий
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src={aiImage} alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Лендинг образовательного проекта с чистой типографикой и высокой конверсией</p>
-                  <a href="https://preview--neural-pathways-academy.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
-                </div>
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src={anyImage} alt="AnyTranslator" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">AnyTranslator — AI-переводчик</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Продуктовый сайт с лаконичным дизайном и акцентом на CTA</p>
-                  <a href="https://anytranslator.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
-                </div>
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
-                <img src={web1Image} alt="Flora Dream" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Элегантный сайт флористической студии с удобной навигацией и бронированием</p>
-                  <a href="https://vetka-recreation.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
-                </div>
-              </div>
-            </div>
-            <div className="text-center mt-10">
-              <Button 
-                variant="default" 
-                size="lg" 
-                className="px-8 py-4 text-lg font-semibold shadow-soft hover:shadow-xl transition-all"
-                onClick={() => handleCategoryClick('/web-design')}
-              >
-                Смотреть больше работ
-              </Button>
-            </div>
-          </div>
 
           {/* Order Form */}
           <div id="order-form" className="max-w-2xl mx-auto mt-20">

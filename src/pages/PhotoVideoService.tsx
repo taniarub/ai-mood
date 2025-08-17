@@ -246,11 +246,11 @@ const PhotoVideoService = () => {
             </div>
           </div>
 
-          {/* Image Generation Packages */}
+          {/* Portfolio categories */}
           <div className="max-w-6xl mx-auto mb-20">
             <div className="text-center mb-14">
               <h2 className="text-4xl font-bold text-foreground mb-4">
-                Генерация изображений
+                Примеры работ
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-10">
@@ -558,7 +558,7 @@ const PhotoVideoService = () => {
             </div>
           </div>
 
-          {/* Portfolio categories */}
+          {/* Image Generation Packages */}
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">

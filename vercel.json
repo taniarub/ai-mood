@@ -3,46 +3,10 @@
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "functions": {
-    "app/api/images/[...path].js": {
-      "maxDuration": 10
-    }
-  },
-  "headers": [
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
-        },
-        {
-          "key": "Content-Type",
-          "value": "image/*"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
-      "source": "/images/:path*",
-      "destination": "/images/:path*"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/images/(.*)",
-      "dest": "/images/$1",
-      "headers": {
-        "cache-control": "s-maxage=31536000"
-      }
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

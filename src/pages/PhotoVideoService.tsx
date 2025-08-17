@@ -248,10 +248,47 @@ const PhotoVideoService = () => {
 
           {/* Portfolio categories */}
           <div className="max-w-6xl mx-auto mb-20">
-            <div className="text-center mb-14">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
                 Примеры работ
               </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {categories.map((category) => (
+                <Card 
+                  key={category.id}
+                  className="group cursor-pointer bg-card border border-border hover:border-primary/60 hover:shadow-[0_2px_16px_rgba(139,92,246,0.10)] transition-all rounded-3xl"
+                  onClick={() => handleCategoryClick(category.route)}
+                >
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      {category.icon}
+                    </div>
+                    <CardTitle className="text-xl">{category.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-muted-foreground mb-4">
+                      {category.description}
+                    </p>
+                    <div className="text-primary font-medium text-sm">
+                      Посмотреть портфолио →
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Image Generation Packages */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <div className="text-center mb-14">
+              <h2 className="text-4xl font-bold text-foreground mb-4">
+                Выберите подходящий пакет для вашего проекта
+              </h2>
+              <h3 className="text-2xl font-semibold text-foreground mb-8">
+                Генерация изображений
+              </h3>
             </div>
             <div className="grid md:grid-cols-3 gap-10">
               {/* Package 1 */}
@@ -405,9 +442,9 @@ const PhotoVideoService = () => {
           {/* Video Generation Packages */}
           <div className="max-w-6xl mx-auto mb-20">
             <div className="text-center mb-14">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Генерация видео
-              </h2>
+              <h3 className="text-2xl font-semibold text-foreground mb-8">
+                Создание видео
+              </h3>
             </div>
             <div className="grid md:grid-cols-3 gap-10">
               {/* Video Package 1 */}
@@ -555,40 +592,6 @@ const PhotoVideoService = () => {
                   </Button>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-
-          {/* Image Generation Packages */}
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Примеры работ
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {categories.map((category) => (
-                <Card 
-                  key={category.id}
-                  className="group cursor-pointer bg-card border border-border hover:border-primary/60 hover:shadow-[0_2px_16px_rgba(139,92,246,0.10)] transition-all rounded-3xl"
-                  onClick={() => handleCategoryClick(category.route)}
-                >
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      {category.icon}
-                    </div>
-                    <CardTitle className="text-xl">{category.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-muted-foreground mb-4">
-                      {category.description}
-                    </p>
-                    <div className="text-primary font-medium text-sm">
-                      Посмотреть портфолио →
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
 

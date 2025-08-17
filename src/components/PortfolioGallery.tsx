@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { X, Eye, ArrowLeft, ExternalLink } from "lucide-react";
 
 interface WorkItem {
@@ -57,35 +56,35 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             id: 'cosm2',
             title: 'Косметические продукты - Серия 2',
             description: 'Стильная презентация средств по уходу за кожей',
-            image: '/images/makeup/img (1).png',
+            image: '/images/makeup/img_(1).png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm3',
             title: 'Косметические продукты - Серия 3',
             description: 'Элегантная съемка декоративной косметики',
-            image: '/images/makeup/img (2).png',
+            image: '/images/makeup/img_(2).png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm4',
             title: 'Косметические продукты - Серия 4',
             description: 'Профессиональная фотосессия средств по уходу',
-            image: '/images/makeup/img (3).png',
+            image: '/images/makeup/img_(3).png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm5',
             title: 'Косметические продукты - Серия 5',
             description: 'Современная съемка косметических брендов',
-            image: '/images/makeup/img (4).png',
+            image: '/images/makeup/img_(4).png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm6',
             title: 'Косметические продукты - Серия 6',
             description: 'Креативная презентация косметических средств',
-            image: '/images/makeup/img (5).png',
+            image: '/images/makeup/img_(5).png',
             category: 'Косметика и уход'
           },
           {
@@ -106,28 +105,28 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             id: 'cosm9',
             title: 'Косметические продукты - Скриншот 1',
             description: 'Профессиональная съемка косметики',
-            image: '/images/makeup/Screenshot 2025-07-03 at 20.18.55.png',
+            image: '/images/makeup/Screenshot_2025-07-03_at_20.18.55.png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm10',
             title: 'Косметические продукты - Скриншот 2',
             description: 'Современная презентация косметических средств',
-            image: '/images/makeup/Screenshot 2025-07-26 at 23.24.18.png',
+            image: '/images/makeup/Screenshot_2025-07-26_at_23.24.18.png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm11',
             title: 'Косметические продукты - Скриншот 3',
             description: 'Элегантная съемка косметики',
-            image: '/images/makeup/Screenshot 2025-07-26 at 23.24.35.png',
+            image: '/images/makeup/Screenshot_2025-07-26_at_23.24.35.png',
             category: 'Косметика и уход'
           },
           {
             id: 'cosm12',
             title: 'Косметические продукты - Скриншот 4',
             description: 'Профессиональная фотосессия косметических средств',
-            image: '/images/makeup/Screenshot 2025-07-26 at 23.28.42.png',
+            image: '/images/makeup/Screenshot_2025-07-26_at_23.28.42.png',
             category: 'Косметика и уход'
           }
         );
@@ -154,7 +153,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             id: 'fashion3',
             title: 'Девушка в вишневом платье',
             description: 'Романтичная фотосессия в стильной одежде',
-            image: '/images/clothes/girl cherry dress.png',
+            image: '/images/clothes/girlcherrydress.png',
             category: 'Одежда и аксессуары'
           },
           {
@@ -175,147 +174,147 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             id: 'fashion6',
             title: 'Модная фотосессия - Скриншот 1',
             description: 'Современная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-06-24 at 15.27.18.png',
+            image: '/images/clothes/Screenshot_2025-06-24_at_15.27.18.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion7',
             title: 'Модная фотосессия - Скриншот 2',
             description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-06-24 at 15.35.44.png',
+            image: '/images/clothes/Screenshot_2025-06-24_at_15.35.44.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion8',
             title: 'Модная фотосессия - Скриншот 3',
             description: 'Элегантная презентация модной одежды',
-            image: '/images/clothes/Screenshot 2025-06-24 at 15.35.56.png',
+            image: '/images/clothes/Screenshot_2025-06-24_at_15.35.56.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion9',
             title: 'Модная фотосессия - Скриншот 4',
             description: 'Современная съемка стильных образов',
-            image: '/images/clothes/Screenshot 2025-06-26 at 00.00.03.png',
+            image: '/images/clothes/Screenshot_2025-06-26_at_00.00.03.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion10',
             title: 'Модная фотосессия - Скриншот 5',
             description: 'Профессиональная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.31.png',
+            image: '/images/clothes/Screenshot_2025-07-03_at_20.20.31.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion11',
             title: 'Модная фотосессия - Скриншот 6',
             description: 'Стильная презентация модных образов',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.36.png',
+            image: '/images/clothes/Screenshot_2025-07-03_at_20.20.36.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion12',
             title: 'Модная фотосессия - Скриншот 7',
             description: 'Элегантная съемка современной одежды',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.44.png',
+            image: '/images/clothes/Screenshot_2025-07-03_at_20.20.44.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion13',
             title: 'Модная фотосессия - Скриншот 8',
             description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.20.52.png',
+            image: '/images/clothes/Screenshot_2025-07-03_at_20.20.52.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion14',
             title: 'Модная фотосессия - Скриншот 9',
             description: 'Современная фотосессия стильной одежды',
-            image: '/images/clothes/Screenshot 2025-07-03 at 20.21.03.png',
+            image: '/images/clothes/Screenshot_2025-07-03_at_20.21.03.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion15',
             title: 'Модная фотосессия - Скриншот 10',
             description: 'Профессиональная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 15.49.56.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_15.49.56.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion16',
             title: 'Модная фотосессия - Скриншот 11',
             description: 'Элегантная презентация современной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 15.52.59.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_15.52.59.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion17',
             title: 'Модная фотосессия - Скриншот 12',
             description: 'Стильная съемка модных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 15.53.05.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_15.53.05.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion18',
             title: 'Модная фотосессия - Скриншот 13',
             description: 'Профессиональная фотосессия современной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 16.09.24.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_16.09.24.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion19',
             title: 'Модная фотосессия - Скриншот 14',
             description: 'Современная съемка стильных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.30.26.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_22.30.26.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion20',
             title: 'Модная фотосессия - Скриншот 15',
             description: 'Элегантная презентация модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.30.26 copy.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_22.30.26_copy.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion21',
             title: 'Модная фотосессия - Скриншот 16',
             description: 'Профессиональная съемка современных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.30.32.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_22.30.32.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion22',
             title: 'Модная фотосессия - Скриншот 17',
             description: 'Стильная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.33.50.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_22.33.50.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion23',
             title: 'Модная фотосессия - Скриншот 18',
             description: 'Современная съемка элегантных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.59.24.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_22.59.24.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion24',
             title: 'Модная фотосессия - Скриншот 19',
             description: 'Профессиональная презентация модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 22.59.40.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_22.59.40.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion25',
             title: 'Модная фотосессия - Скриншот 20',
             description: 'Элегантная съемка стильных образов',
-            image: '/images/clothes/Screenshot 2025-07-20 at 23.02.50.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_23.02.50.png',
             category: 'Одежда и аксессуары'
           },
           {
             id: 'fashion26',
             title: 'Модная фотосессия - Скриншот 21',
             description: 'Современная фотосессия модной одежды',
-            image: '/images/clothes/Screenshot 2025-07-20 at 23.03.29.png',
+            image: '/images/clothes/Screenshot_2025-07-20_at_23.03.29.png',
             category: 'Одежда и аксессуары'
           }
         );

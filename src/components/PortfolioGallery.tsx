@@ -529,7 +529,13 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
   }
 
   const handleBackToHome = () => {
-    navigate('/#portfolio');
+    // Используем браузерную историю для возврата на предыдущую страницу
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      // Fallback на главную страницу если истории нет
+      navigate('/#portfolio');
+    }
   };
 
   const openImageModal = (imageSrc: string) => {
@@ -563,7 +569,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             className="gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
-            Назад к портфолио
+            Назад
           </Button>
         </div>
 

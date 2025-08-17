@@ -28,7 +28,7 @@ const HeroSection = () => {
           {/* Enhanced main heading with better gradient */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-primary via-purple-600 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
-              ИИ-контент
+              
             </span>
           </h1>
 

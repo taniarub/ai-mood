@@ -33,12 +33,12 @@ const HeroSection = () => {
           </h1>
 
           {/* Improved subtitle with icon */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8">
             Уникальные фото, видео и сайты с помощью искусственного интеллекта
           </h2>
 
           {/* Enhanced description with better spacing */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-2xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
             <span className="text-foreground font-medium">Ваши идеи → Наш ИИ → Готовый результат.</span>
             <br />
             <span className="text-muted-foreground">Экономия времени и бюджета без потери качества.</span>
@@ -49,7 +49,7 @@ const HeroSection = () => {
             <Button 
               variant="default"
               size="lg"
-              className="group bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-4 text-lg font-semibold"
+              className="group bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-4 text-lg md:text-xl lg:text-xl font-semibold"
               onClick={() => {
                 document.getElementById('services')?.scrollIntoView({ 
                   behavior: 'smooth' 
@@ -64,7 +64,7 @@ const HeroSection = () => {
             <Button 
               variant="outline"
               size="lg"
-              className="group border-2 border-primary/30 bg-background text-foreground hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-lg font-semibold"
+              className="group border-2 border-primary/30 bg-background text-foreground hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 px-8 py-4 text-lg md:text-xl lg:text-xl font-semibold"
               onClick={() => {
                 document.getElementById('contacts')?.scrollIntoView({ 
                   behavior: 'smooth' 

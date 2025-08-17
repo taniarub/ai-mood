@@ -386,6 +386,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
         break;
 
       case 'товары и предметы':
+      case 'предметная съёмка':
       case 'objects':
       case 'products':
         images.push(

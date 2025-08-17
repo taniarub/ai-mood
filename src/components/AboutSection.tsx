@@ -27,7 +27,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main content */}
-          <h2 className="fade-in-up text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <h2 className="fade-in-up text-4xl font-bold text-foreground mb-8">
             Ваши идеи оживают за минуты, а не недели!
           </h2>
 

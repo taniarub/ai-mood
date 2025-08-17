@@ -33,12 +33,12 @@ const HeroSection = () => {
           </h1>
 
           {/* Improved subtitle with icon */}
-          <h2 className="text-4xl font-bold text-foreground mb-8">
+          <h2 className="text-5xl font-bold text-foreground mb-8">
             Уникальные фото, видео и сайты с помощью искусственного интеллекта
           </h2>
 
           {/* Enhanced description with better spacing */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
             <span className="text-foreground font-medium">Ваши идеи → Наш ИИ → Готовый результат.</span>
             <br />
             <span className="text-muted-foreground">Экономия времени и бюджета без потери качества.</span>

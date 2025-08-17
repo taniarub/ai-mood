@@ -1,11 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemap location  
+Sitemap: https://ai-mood.vercel.app/sitemap.xml
 
-# Allow crawling of images for better SEO
-Allow: /images/
-
+# Images moved to src/assets for Vite bundling
 # Common crawl delay to be respectful
 Crawl-delay: 1

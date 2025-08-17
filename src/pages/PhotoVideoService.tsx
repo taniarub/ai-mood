@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ShoppingBag, Camera, Zap, CheckCircle, Send, AlertCircle, Sparkles } from "lucide-react";
+import { ArrowLeft, Shirt, Palette, Gem, Zap, CheckCircle, Send, AlertCircle, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import { useState, useEffect } from "react";
 
@@ -43,7 +43,7 @@ const PhotoVideoService = () => {
       description: "Модные фотосессии, портреты моделей, презентация одежды и аксессуаров",
       imageCount: 26,
       route: "/photography",
-      icon: <ShoppingBag className="w-6 h-6" />
+      icon: <Shirt className="w-6 h-6 text-blue-600" />
     },
     {
       id: "cosmetics",
@@ -51,7 +51,7 @@ const PhotoVideoService = () => {
       description: "Профессиональная съемка косметических продуктов, средств по уходу",
       imageCount: 12,
       route: "/product-photography",
-      icon: <Camera className="w-6 h-6" />
+      icon: <Palette className="w-6 h-6 text-pink-600" />
     },
     {
       id: "product",
@@ -59,7 +59,7 @@ const PhotoVideoService = () => {
       description: "Элегантная презентация товаров, ювелирных изделий и других продуктов",
       imageCount: 0,
       route: "/item-photography",
-      icon: <Camera className="w-6 h-6" />
+      icon: <Gem className="w-6 h-6 text-purple-600" />
     }
   ];
 

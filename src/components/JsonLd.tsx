@@ -10,7 +10,7 @@ const JsonLd = ({ type = 'organization' }: JsonLdProps) => {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Dream AI",
-      "description": "Создаю фото, видео и сайты с помощью нейросетей. Быстро, реалистично и красиво. Для брендов, маркетплейсов и бизнеса.",
+      "description": "Создаю уникальный контент для бизнеса: фото, видео и сайты с помощью нейросетей, чтобы вы выделялись на рынке и экономили время.",
       "url": "https://yourdomain.com",
       "logo": "https://yourdomain.com/favicon.ico",
       "contactPoint": {
@@ -37,7 +37,7 @@ const JsonLd = ({ type = 'organization' }: JsonLdProps) => {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Dream AI",
-        "description": "ИИ-контент для брендов и маркетплейсов",
+        "description": "Создаю уникальный контент для бизнеса: фото, видео и сайты с помощью нейросетей, чтобы вы выделялись на рынке и экономили время.",
         "url": "https://yourdomain.com",
         "potentialAction": {
           "@type": "SearchAction",

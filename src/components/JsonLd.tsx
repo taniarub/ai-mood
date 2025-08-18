@@ -102,6 +102,9 @@ const JsonLd = ({ type = 'organization' }: JsonLdProps) => {
   };
 
   useEffect(() => {
+    // Skip in SSR environment
+    if (typeof window === 'undefined') return;
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.innerHTML = JSON.stringify(getStructuredData());
@@ -122,6 +125,18 @@ const JsonLd = ({ type = 'organization' }: JsonLdProps) => {
       }
     };
   }, [type]);
+
+  // Server-side rendering: render script tag directly
+  if (typeof window === 'undefined') {
+    return (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData())
+        }}
+      />
+    );
+  }
 
   return null;
 };

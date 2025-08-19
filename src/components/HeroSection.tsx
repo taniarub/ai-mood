@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           {/* Improved subtitle with icon */}
           <h2 className="text-5xl font-bold text-foreground mb-8">
-            Уникальные <span className="text-emerald-600">фото</span>, <span className="text-blue-600">видео</span> и <span className="text-purple-600">сайты</span> с помощью искусственного интеллекта
+            Уникальные <span className="text-emerald-600">фото</span>, <span className="text-blue-600">видео</span> и <span className="text-purple-600">сайты</span> с помощью нейросетей
           </h2>
 
           {/* Enhanced description with better spacing */}

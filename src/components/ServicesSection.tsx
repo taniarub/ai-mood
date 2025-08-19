@@ -9,26 +9,6 @@ const ServicesSection = () => {
 
   const services = [
     {
-      id: "photo-video",
-      title: "Генерация фотографий и видео",
-      description: "Создаём профессиональный визуальный контент для социальных сетей, маркетплейсов и брендинга",
-      features: [
-        "Фотосессии для брендов",
-        "Съемка косметических продуктов", 
-        "Предметная фотография",
-        "Короткие ролики для соцсетей",
-        "Презентационные видео"
-      ],
-      icon: (
-        <div className="flex items-center gap-2">
-          <Camera className="w-6 h-6" />
-          <Video className="w-6 h-6" />
-        </div>
-      ),
-      route: "/photo-video-service",
-      color: "from-pink-500 to-purple-600"
-    },
-    {
       id: "web-design",
       title: "Создание сайтов и лендингов",
       description: "Разрабатываем современные веб-сайты и лендинги с высоким UX и конверсией для бизнеса",
@@ -47,6 +27,26 @@ const ServicesSection = () => {
       ),
       route: "/web-design-service",
       color: "from-blue-500 to-cyan-600"
+    },
+    {
+      id: "photo-video",
+      title: "Генерация фотографий и видео",
+      description: "Создаём профессиональный визуальный контент для социальных сетей, маркетплейсов и брендинга",
+      features: [
+        "Фотосессии для брендов",
+        "Съемка косметических продуктов", 
+        "Предметная фотография",
+        "Короткие ролики для соцсетей",
+        "Презентационные видео"
+      ],
+      icon: (
+        <div className="flex items-center gap-2">
+          <Camera className="w-6 h-6" />
+          <Video className="w-6 h-6" />
+        </div>
+      ),
+      route: "/photo-video-service",
+      color: "from-pink-500 to-purple-600"
     }
   ];
 

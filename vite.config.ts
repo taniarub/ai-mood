@@ -25,10 +25,7 @@ export default defineConfig(({ mode, command }) => ({
       output: {
         format: 'cjs'
       }
-    } : {
-      // For static builds, use main.tsx instead of entry-client.tsx
-      input: process.env.SSR ? './src/entry-client.tsx' : './src/main.tsx'
-    }
+    } : undefined
   },
   ssr: {
     noExternal: ['react-router-dom', '@tanstack/react-query']

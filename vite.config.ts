@@ -26,7 +26,8 @@ export default defineConfig(({ mode, command }) => ({
         format: 'cjs'
       }
     } : {
-      input: './src/entry-client.tsx'
+      // For static builds, use main.tsx instead of entry-client.tsx
+      input: process.env.SSR ? './src/entry-client.tsx' : './src/main.tsx'
     }
   },
   ssr: {

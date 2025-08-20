@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:client && npm run build:server && npm run copy:server",
+    "build": "vite build",
+    "build:static": "vite build",
+    "build:ssr": "npm run build:client && npm run build:server && npm run copy:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "SSR=true vite build --ssr src/entry-server.tsx --outDir dist/server",
     "copy:server": "cp src/server.ts dist/ && cd dist && node -e \"require('fs').writeFileSync('package.json', JSON.stringify({type:'module'}, null, 2))\"",

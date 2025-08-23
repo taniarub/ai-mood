@@ -11,7 +11,6 @@ const ServicesSection = () => {
     {
       id: "web-design",
       title: "Создание сайтов и лендингов",
-      description: "Разрабатываем современные веб-сайты и лендинги с высоким UX и конверсией для бизнеса",
       features: [
         "Корпоративные сайты",
         "Продающие лендинги",
@@ -31,7 +30,6 @@ const ServicesSection = () => {
     {
       id: "photo-video",
       title: "Генерация фотографий и видео",
-      description: "Создаём профессиональный визуальный контент для социальных сетей, маркетплейсов и брендинга",
       features: [
         "Фотосессии для брендов",
         "Съемка косметических продуктов", 
@@ -93,9 +91,6 @@ const ServicesSection = () => {
                   <CardTitle className="text-2xl font-bold text-foreground mb-3">
                     {service.title}
                   </CardTitle>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {service.description}
-                  </p>
                 </CardHeader>
                 
                 <CardContent className="space-y-6">

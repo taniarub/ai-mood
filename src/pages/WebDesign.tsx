@@ -20,7 +20,7 @@ const WebDesign = () => {
           {
             id: 'ai',
             title: 'AI-Academy',
-            description: 'Лендинг образовательного проекта с чистой типографикой и высокой конверсией',
+            description: 'Сайт школы искусственного интеллекта, который привлекает учеников',
             image: aiImage,
             url: 'https://preview--neural-pathways-academy.lovable.app',
             category: 'website'
@@ -28,7 +28,7 @@ const WebDesign = () => {
           {
             id: 'any',
             title: 'AnyTranslator — AI-переводчик',
-            description: 'Продуктовый сайт с лаконичным дизайном и акцентом на CTA',
+            description: 'Простой сайт переводчика с ясными кнопками и удобным интерфейсом',
             image: anyImage,
             url: 'https://anytranslator.app/',
             category: 'website'
@@ -36,7 +36,7 @@ const WebDesign = () => {
           {
             id: 'flower',
             title: 'Mon Amour Flowers',
-            description: 'Современный сайт цветочного магазина с элегантным дизайном',
+            description: 'Красивый сайт цветочного магазина с лёгким заказом',
             image: flowerImage,
             url: 'https://mon-amour-flowers.lovable.app',
             category: 'website'
@@ -44,7 +44,7 @@ const WebDesign = () => {
           {
             id: 'school',
             title: 'Language School',
-            description: 'Лендинг языковой школы',
+            description: 'Простой сайт языковой школы с ярким дизайном',
             image: shoolImage,
             url: 'https://language-school-clone.lovable.app/',
             category: 'website'
@@ -52,7 +52,7 @@ const WebDesign = () => {
           {
             id: 'pilates',
             title: 'Pilates LabSpace',
-            description: 'Современный сайт студии пилатеса с элегантным дизайном и удобной записью на занятия',
+            description: 'Стильный сайт студии пилатеса с удобной записью',
             image: pilImage,
             url: 'https://pilates-labspace-clone.lovable.app',
             category: 'website'
@@ -60,7 +60,7 @@ const WebDesign = () => {
           {
             id: 'vetka',
             title: 'Flora Dream',
-            description: 'Сайт рекреационного центра с удобной навигацией и бронированием',
+            description: 'Красивый сайт цветочного магазина с лёгким заказом и бронированием',
             image: web1Image,
             url: 'https://vetka-recreation.lovable.app',
             category: 'website'
@@ -68,7 +68,7 @@ const WebDesign = () => {
           {
             id: 'brightsmile',
             title: 'BrightSmile Clinic',
-            description: 'Современный сайт стоматологической клиники с удобной записью на прием',
+            description: 'Простой сайт стоматологической клиники с удобной записью',
             image: dentImage,
             url: 'https://brightsmile-clinic.lovable.app',
             category: 'website'

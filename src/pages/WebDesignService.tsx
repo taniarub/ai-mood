@@ -241,7 +241,7 @@ const WebDesignService = () => {
                 <img src={aiImage} alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Лендинг образовательного проекта с чистой типографикой и высокой конверсией</p>
+                  <p className="text-muted-foreground text-sm mb-2">Сайт школы искусственного интеллекта, который привлекает учеников</p>
                   <a href="https://preview--neural-pathways-academy.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
@@ -249,7 +249,7 @@ const WebDesignService = () => {
                 <img src={anyImage} alt="AnyTranslator" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">AnyTranslator — AI-переводчик</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Продуктовый сайт с лаконичным дизайном и акцентом на CTA</p>
+                  <p className="text-muted-foreground text-sm mb-2">Простой сайт переводчика с ясными кнопками и удобным интерфейсом</p>
                   <a href="https://anytranslator.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
@@ -257,7 +257,7 @@ const WebDesignService = () => {
                 <img src={web1Image} alt="Flora Dream" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Элегантный сайт флористической студии с удобной навигацией и бронированием</p>
+                  <p className="text-muted-foreground text-sm mb-2">Красивый сайт цветочного магазина с лёгким заказом и бронированием</p>
                   <a href="https://vetka-recreation.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>

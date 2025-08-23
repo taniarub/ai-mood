@@ -498,7 +498,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
           {
             id: 'web1',
             title: 'AI-Academy',
-            description: 'Лендинг образовательного проекта с чистой типографикой и высокой конверсией',
+            description: 'Сайт школы искусственного интеллекта, который привлекает учеников',
             image: websiteAi,
             url: 'https://preview--neural-pathways-academy.lovable.app',
             category: 'Лендинги и сайты'
@@ -506,7 +506,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
           {
             id: 'web2',
             title: 'AnyTranslator — AI-переводчик',
-            description: 'Продуктовый сайт с лаконичным дизайном и акцентом на CTA',
+            description: 'Простой сайт переводчика с ясными кнопками и удобным интерфейсом',
             image: websiteAny,
             url: 'https://anytranslator.app/',
             category: 'Лендинги и сайты'
@@ -514,7 +514,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
           {
             id: 'web3',
             title: 'Mon Amour Flowers',
-            description: 'Современный сайт цветочного магазина с элегантным дизайном',
+            description: 'Красивый сайт цветочного магазина с лёгким заказом',
             image: websiteFlower,
             url: 'https://mon-amour-flowers.lovable.app',
             category: 'Лендинги и сайты'

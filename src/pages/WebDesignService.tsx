@@ -242,7 +242,7 @@ const WebDesignService = () => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
                   <p className="text-muted-foreground text-sm mb-2">Сайт школы искусственного интеллекта, который привлекает учеников</p>
-                  <a href="https://preview--neural-pathways-academy.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                  <a href="https://language-school-clone.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
               <div className="rounded-2xl overflow-hidden shadow-soft group bg-card hover:shadow-xl transition-all cursor-pointer">
@@ -258,7 +258,7 @@ const WebDesignService = () => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
                   <p className="text-muted-foreground text-sm mb-2">Красивый сайт цветочного магазина с лёгким заказом и бронированием</p>
-                  <a href="https://vetka-recreation.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                  <a href="https://mon-amour-flowers.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
             </div>

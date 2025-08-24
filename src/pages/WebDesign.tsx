@@ -22,7 +22,7 @@ const WebDesign = () => {
             title: 'AI-Academy',
             description: 'Сайт школы искусственного интеллекта, который привлекает учеников',
             image: aiImage,
-            url: 'https://preview--neural-pathways-academy.lovable.app',
+            url: 'https://language-school-clone.vercel.app/',
             category: 'website'
           },
           {
@@ -38,7 +38,7 @@ const WebDesign = () => {
             title: 'Mon Amour Flowers',
             description: 'Красивый сайт цветочного магазина с лёгким заказом',
             image: flowerImage,
-            url: 'https://mon-amour-flowers.lovable.app',
+            url: 'https://mon-amour-flowers.vercel.app/',
             category: 'website'
           },
           {
@@ -46,7 +46,7 @@ const WebDesign = () => {
             title: 'Language School',
             description: 'Простой сайт языковой школы с ярким дизайном',
             image: shoolImage,
-            url: 'https://language-school-clone.lovable.app/',
+            url: 'https://language-school-clone.vercel.app/',
             category: 'website'
           },
           {
@@ -54,7 +54,7 @@ const WebDesign = () => {
             title: 'Pilates LabSpace',
             description: 'Стильный сайт студии пилатеса с удобной записью',
             image: pilImage,
-            url: 'https://pilates-labspace-clone.lovable.app',
+            url: 'https://pilates-six.vercel.app/',
             category: 'website'
           },
           {
@@ -62,7 +62,7 @@ const WebDesign = () => {
             title: 'Flora Dream',
             description: 'Красивый сайт цветочного магазина с лёгким заказом и бронированием',
             image: web1Image,
-            url: 'https://vetka-recreation.lovable.app',
+            url: 'https://vetka-recreation-go3gumij2-taniarubs-projects.vercel.app/',
             category: 'website'
           },
           {
@@ -70,7 +70,7 @@ const WebDesign = () => {
             title: 'BrightSmile Clinic',
             description: 'Простой сайт стоматологической клиники с удобной записью',
             image: dentImage,
-            url: 'https://brightsmile-clinic.lovable.app',
+            url: 'https://brightsmile-clinic-iqx47zqa4-taniarubs-projects.vercel.app/',
             category: 'website'
           }
         ]}

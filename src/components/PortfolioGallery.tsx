@@ -500,7 +500,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             title: 'AI-Academy',
             description: 'Сайт школы искусственного интеллекта, который привлекает учеников',
             image: websiteAi,
-            url: 'https://preview--neural-pathways-academy.lovable.app',
+            url: 'https://language-school-clone.vercel.app/',
             category: 'Лендинги и сайты'
           },
           {
@@ -516,7 +516,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             title: 'Mon Amour Flowers',
             description: 'Красивый сайт цветочного магазина с лёгким заказом',
             image: websiteFlower,
-            url: 'https://mon-amour-flowers.lovable.app',
+            url: 'https://mon-amour-flowers.vercel.app/',
             category: 'Лендинги и сайты'
           }
         );

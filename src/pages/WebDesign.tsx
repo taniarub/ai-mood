@@ -22,7 +22,7 @@ const WebDesign = () => {
             title: 'AI-Academy',
             description: 'Сайт школы искусственного интеллекта, который привлекает учеников (временно работает только с VPN)',
             image: aiImage,
-            url: 'https://language-school-clone.vercel.app/',
+            url: 'https://preview--neural-pathways-academy.lovable.app',
             category: 'website'
           },
           {

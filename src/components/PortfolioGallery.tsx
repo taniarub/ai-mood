@@ -500,7 +500,7 @@ const PortfolioGallery = ({ category, title, description, initialWorks = [] }: P
             title: 'AI-Academy',
             description: 'Сайт школы искусственного интеллекта, который привлекает учеников (временно работает только с VPN)',
             image: websiteAi,
-            url: 'https://language-school-clone.vercel.app/',
+            url: 'https://preview--neural-pathways-academy.lovable.app',
             category: 'Лендинги и сайты'
           },
           {

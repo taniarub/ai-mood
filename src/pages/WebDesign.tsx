@@ -20,7 +20,7 @@ const WebDesign = () => {
           {
             id: 'ai',
             title: 'AI-Academy',
-            description: 'Сайт школы искусственного интеллекта, который привлекает учеников',
+            description: 'Сайт школы искусственного интеллекта, который привлекает учеников (временно работает только с VPN)',
             image: aiImage,
             url: 'https://language-school-clone.vercel.app/',
             category: 'website'

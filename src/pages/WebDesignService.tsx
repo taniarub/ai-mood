@@ -241,7 +241,7 @@ const WebDesignService = () => {
                 <img src={aiImage} alt="AI-academy" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">AI-academy</h3>
-                  <p className="text-muted-foreground text-sm mb-2">Сайт школы искусственного интеллекта, который привлекает учеников</p>
+                  <p className="text-muted-foreground text-sm mb-2">Сайт школы искусственного интеллекта, который привлекает учеников (временно работает только с VPN)</p>
                   <a href="https://language-school-clone.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>

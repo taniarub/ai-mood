@@ -61,7 +61,7 @@ const ServicesSection = () => {
                 onClick={() => handleServiceClick(service.route)}
                 variant="outline"
                 size="lg"
-                className="h-32 w-full text-xl font-semibold bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-border shadow-soft backdrop-blur-sm"
+                className="h-32 w-full text-xl font-bold text-foreground bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2 border-primary/30 hover:border-primary shadow-soft backdrop-blur-sm"
               >
                 <div className="flex flex-col items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-full border border-primary/20">

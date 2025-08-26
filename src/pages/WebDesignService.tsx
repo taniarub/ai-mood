@@ -258,7 +258,7 @@ const WebDesignService = () => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold mb-1">Flora Dream</h3>
                   <p className="text-muted-foreground text-sm mb-2">Красивый сайт цветочного магазина с лёгким заказом и бронированием</p>
-                  <a href="https://vetka-recreation-go3gumij2-taniarubs-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
+                  <a href="https://vetka-recreation.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Смотреть сайт →</a>
                 </div>
               </div>
             </div>

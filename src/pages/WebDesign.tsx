@@ -62,7 +62,7 @@ const WebDesign = () => {
             title: 'Flora Dream',
             description: 'Красивый сайт цветочного магазина с лёгким заказом и бронированием',
             image: web1Image,
-            url: 'https://vetka-recreation-go3gumij2-taniarubs-projects.vercel.app/',
+            url: 'https://vetka-recreation.vercel.app/',
             category: 'website'
           },
           {
@@ -70,7 +70,7 @@ const WebDesign = () => {
             title: 'BrightSmile Clinic',
             description: 'Простой сайт стоматологической клиники с удобной записью',
             image: dentImage,
-            url: 'https://brightsmile-clinic-iqx47zqa4-taniarubs-projects.vercel.app/',
+            url: 'https://brightsmile-clinic.vercel.app/',
             category: 'website'
           }
         ]}

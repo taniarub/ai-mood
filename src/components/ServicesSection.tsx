@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Camera, Video, Globe, Code, Sparkles } from "lucide-react";
+import { Camera, Video, Globe, Code } from "lucide-react";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
@@ -40,14 +40,9 @@ const ServicesSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="flex items-baseline justify-center gap-3 mb-6">
-              <div className="flex items-baseline gap-1">
-                <Sparkles className="w-8 h-8 text-primary" />
-              </div>
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Выберите услугу
-              </h2>
-            </div>
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Выберите услугу
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Два основных направления работы с ИИ-технологиями для создания качественного контента
             </p>
@@ -61,7 +56,7 @@ const ServicesSection = () => {
                 onClick={() => handleServiceClick(service.route)}
                 variant="outline"
                 size="lg"
-                className="h-32 w-full text-xl font-bold text-foreground bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2 border-primary/30 hover:border-primary shadow-soft backdrop-blur-sm"
+                className="h-32 w-full text-xl font-bold text-foreground bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2 border-primary/30 hover:border-primary shadow-soft"
               >
                 <div className="flex flex-col items-center gap-4">
                   <div className="p-3 bg-primary/10 rounded-full border border-primary/20">

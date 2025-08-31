@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Zap, Globe, Smartphone, Rocket, CheckCircle, Send, AlertCircle, Sparkles } from "lucide-react";
+import { ArrowLeft, Zap, Globe, Smartphone, Rocket, CheckCircle, Send, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
 import { useState, useEffect } from "react";
 import aiImage from "@/assets/images/website/ai.png";
@@ -161,14 +161,9 @@ const WebDesignService = () => {
           {/* Service description */}
           <div className="max-w-5xl mx-auto mb-20">
             <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="flex items-baseline gap-1">
-                  <Sparkles className="w-8 h-8 text-primary" />
-                </div>
-                <h2 className="text-4xl font-bold text-foreground">
-                  Что входит в услугу
-                </h2>
-              </div>
+              <h2 className="text-4xl font-bold text-foreground mb-6">
+                Что входит в услугу
+              </h2>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -438,14 +433,9 @@ const WebDesignService = () => {
           {/* Order Form */}
           <div id="order-form" className="max-w-2xl mx-auto mt-20">
             <div className="text-center mb-8">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="flex items-baseline gap-1">
-                  <Sparkles className="w-8 h-8 text-primary" />
-                </div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">
-                  Обсудим ваш проект
-                </h2>
-              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Обсудим ваш проект
+              </h2>
               <p className="text-muted-foreground">
                 Оставьте заявку, и я свяжусь с вами для обсуждения деталей
               </p>

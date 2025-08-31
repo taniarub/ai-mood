@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Mail, MessageCircle, Send, Check, AlertCircle, Sparkles } from "lucide-react";
+import { Mail, MessageCircle, Send, Check, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
@@ -124,15 +124,9 @@ ${data.message}
         <div className="max-w-4xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
-            <div className="flex items-baseline justify-center gap-3 mb-6">
-              <div className="flex items-baseline gap-1">
-                <Sparkles className="w-8 h-8 text-primary" />
-              </div>
-              <h2 className="fade-in-up text-4xl font-bold text-foreground mb-6">
-                Обсудим ваш проект
-              </h2>
-            </div>
-            
+            <h2 className="fade-in-up text-4xl font-bold text-foreground mb-6">
+              Обсудим ваш проект
+            </h2>
             <p className="fade-in-up text-xl text-muted-foreground max-w-3xl mx-auto">
               Расскажите о ваших задачах, и мы предложим оптимальное решение с использованием ИИ
             </p>

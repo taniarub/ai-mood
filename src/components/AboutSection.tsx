@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Brain, Zap, Star, DollarSign } from "lucide-react";
+import { Brain, Zap, DollarSign } from "lucide-react";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -32,13 +32,8 @@ const AboutSection = () => {
           </h2>
 
           <p className="fade-in-up text-xl text-muted-foreground mb-6 leading-relaxed max-w-3xl mx-auto">
-          Мы создаём <span className="text-emerald-600 font-semibold">фото</span>, <span className="text-blue-600 font-semibold">видео</span> и <span className="text-purple-600 font-semibold">сайты</span> с помощью нейросетей
+          Мы создаём <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent font-bold">фото</span>, <span className="bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent font-bold">видео</span> и <span className="bg-gradient-to-r from-purple-500 to-primary bg-clip-text text-transparent font-bold">сайты</span> с помощью нейросетей
           </p>
-
-          <p className="fade-in-up text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
-            <span className="text-primary font-medium">Быстро, красиво и с учётом задач вашего бизнеса</span>
-          </p>
-
           {/* Features grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             <div className="fade-in-up text-center group">
@@ -59,7 +54,7 @@ const AboutSection = () => {
 
             <div className="fade-in-up text-center group" style={{ animationDelay: '0.4s' }}>
               <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-soft group-hover:shadow-medium transform group-hover:scale-110 transition-smooth">
-                <Star className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Качественно</h3>
               <p className="text-muted-foreground text-sm">Профессиональный результат, неотличимый от реальной съёмки</p>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, ArrowRight, Zap, Star } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           {/* Improved subtitle with icon */}
           <h2 className="text-5xl font-bold text-foreground mb-8">
-            Уникальные <span className="text-emerald-600">фото</span>, <span className="text-blue-600">видео</span> и <span className="text-purple-600">сайты</span> с помощью нейросетей
+            Уникальные <span className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent font-bold">фото</span>, <span className="bg-gradient-to-r from-accent to-purple-400 bg-clip-text text-transparent font-bold">видео</span> и <span className="bg-gradient-to-r from-purple-500 to-primary bg-clip-text text-transparent font-bold">сайты</span> с помощью нейросетей
           </h2>
 
           {/* Enhanced description with better spacing */}
@@ -56,7 +56,6 @@ const HeroSection = () => {
                 });
               }}
             >
-              <Sparkles className="w-5 h-5 mr-2" />
               Выбрать услугу
               <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>

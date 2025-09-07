@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Shirt, Palette, Gem, Zap, CheckCircle, Send, AlertCircle, Camera, ShoppingBag } from "lucide-react";
 import Header from "@/components/Header";
 import { useState, useEffect } from "react";
@@ -26,8 +25,7 @@ const PhotoVideoService = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    package: '',
-    serviceType: ''
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -77,8 +75,7 @@ const PhotoVideoService = () => {
 
 👤 *Имя:* ${data.name}
 📱 *Телефон:* ${data.phone}
-📦 *Пакет:* ${data.package}
-🎨 *Тип услуги:* ${data.serviceType}
+💬 *Сообщение:* ${data.message || 'Не указано'}
 
 ⏰ *Время:* ${new Date().toLocaleString('ru-RU')}
 🌐 *Источник:* Страница "Фото и видео"
@@ -128,8 +125,7 @@ const PhotoVideoService = () => {
         setFormData({
           name: '',
           phone: '',
-          package: '',
-          serviceType: ''
+          message: ''
         });
       } else {
         setSubmitStatus('error');
@@ -142,7 +138,7 @@ const PhotoVideoService = () => {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -275,320 +271,7 @@ const PhotoVideoService = () => {
             </div>
           </div>
 
-          {/* Image Generation Packages */}
-          <div className="max-w-6xl mx-auto mb-20">
-            <div className="text-center mb-14">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Выберите подходящий пакет для вашего проекта
-              </h2>
-              <h3 className="text-2xl font-semibold text-foreground mb-8">
-                Генерация изображений
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-3 gap-10">
-              {/* Package 1 */}
-              <Card className="bg-card border border-border hover:border-primary/60 hover:shadow-lg transition-all rounded-3xl group flex flex-col h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">📸</span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Базовый</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground text-base mb-4">
-                      До 3 уникальных изображений
-                    </p>
-                    <ul className="text-sm text-muted-foreground space-y-2 mb-4">
-                      <li>• Разрешение: до 1024×1024 px</li>
-                      <li>• Без сложных правок</li>
-                      <li>• Быстрое выполнение</li>
-                    </ul>
-                    <div className="space-y-2 pt-4 border-t">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Срок:</span>
-                        <span className="font-medium">до 24 часов</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 25 BYN</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Button 
-                    className="w-full mt-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white"
-                    size="lg"
-                    onClick={() => {
-                      const form = document.getElementById('order-form');
-                      if (form) {
-                        const serviceSelect = form.querySelector('select[name="serviceType"]') as HTMLSelectElement;
-                        const packageSelect = form.querySelector('select[name="package"]') as HTMLSelectElement;
-                        if (serviceSelect) serviceSelect.value = 'images';
-                        if (packageSelect) packageSelect.value = 'basic-images';
-                        form.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-              {/* Package 2 */}
-              <Card className="bg-card border border-border hover:border-primary/60 hover:shadow-lg transition-all rounded-3xl relative group flex flex-col h-full">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <Badge className="bg-primary text-primary-foreground px-4 py-1 text-base rounded-full shadow-soft">Популярный</Badge>
-                </div>
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">🎨</span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Стандарт</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground text-base mb-4">
-                      До 10 уникальных изображений в согласованном стиле
-                    </p>
-                    <ul className="text-sm text-muted-foreground space-y-2 mb-4">
-                      <li>• Разрешение: до 2048×2048 px</li>
-                      <li>• 1 итерация правок включена</li>
-                      <li>• Единая цветовая гамма</li>
-                    </ul>
-                    <div className="space-y-2 pt-4 border-t">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Срок:</span>
-                        <span className="font-medium">1–2 рабочих дня</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 60 BYN</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Button 
-                    className="w-full mt-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white"
-                    size="lg"
-                    onClick={() => {
-                      const form = document.getElementById('order-form');
-                      if (form) {
-                        const serviceSelect = form.querySelector('select[name="serviceType"]') as HTMLSelectElement;
-                        const packageSelect = form.querySelector('select[name="package"]') as HTMLSelectElement;
-                        if (serviceSelect) serviceSelect.value = 'images';
-                        if (packageSelect) packageSelect.value = 'standard-images';
-                        form.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-              {/* Package 3 */}
-              <Card className="bg-card border border-border hover:border-primary/60 hover:shadow-lg transition-all rounded-3xl group flex flex-col h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">💎</span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Премиум</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground text-base mb-4">
-                      До 20 уникальных изображений + оптимизация
-                    </p>
-                    <ul className="text-sm text-muted-foreground space-y-2 mb-4">
-                      <li>• Разрешение: до 4096×4096 px</li>
-                      <li>• До 3 итераций правок</li>
-                      <li>• Фирменный стиль (по желанию)</li>
-                      <li>• Оптимизация для соцсетей</li>
-                    </ul>
-                    <div className="space-y-2 pt-4 border-t">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Срок:</span>
-                        <span className="font-medium">2–4 рабочих дня</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 120 BYN</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Button 
-                    className="w-full mt-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white"
-                    size="lg"
-                    onClick={() => {
-                      const form = document.getElementById('order-form');
-                      if (form) {
-                        const serviceSelect = form.querySelector('select[name="serviceType"]') as HTMLSelectElement;
-                        const packageSelect = form.querySelector('select[name="package"]') as HTMLSelectElement;
-                        if (serviceSelect) serviceSelect.value = 'images';
-                        if (packageSelect) packageSelect.value = 'premium-images';
-                        form.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
 
-          {/* Video Generation Packages */}
-          <div className="max-w-6xl mx-auto mb-20">
-            <div className="text-center mb-14">
-              <h3 className="text-2xl font-semibold text-foreground mb-8">
-                Создание видео
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-3 gap-10">
-              {/* Video Package 1 */}
-              <Card className="bg-card border border-border hover:border-primary/60 hover:shadow-lg transition-all rounded-3xl group flex flex-col h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">🎬</span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Короткое видео</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground text-base mb-4">
-                      Длительность: до 5 секунд
-                    </p>
-                    <ul className="text-sm text-muted-foreground space-y-2 mb-4">
-                      <li>• Без сложного монтажа</li>
-                      <li>• Разрешение: 1080p</li>
-                      <li>• Быстрое выполнение</li>
-                    </ul>
-                    <div className="space-y-2 pt-4 border-t">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Срок:</span>
-                        <span className="font-medium">1 рабочий день</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 40 BYN</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Button 
-                    className="w-full mt-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white"
-                    size="lg"
-                    onClick={() => {
-                      const form = document.getElementById('order-form');
-                      if (form) {
-                        const serviceSelect = form.querySelector('select[name="serviceType"]') as HTMLSelectElement;
-                        const packageSelect = form.querySelector('select[name="package"]') as HTMLSelectElement;
-                        if (serviceSelect) serviceSelect.value = 'video';
-                        if (packageSelect) packageSelect.value = 'short-video';
-                        form.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-              {/* Video Package 2 */}
-              <Card className="bg-card border border-border hover:border-primary/60 hover:shadow-lg transition-all rounded-3xl relative group flex flex-col h-full">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <Badge className="bg-primary text-primary-foreground px-4 py-1 text-base rounded-full shadow-soft">Рекомендуемый</Badge>
-                </div>
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">📺</span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Рекламный ролик</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground text-base mb-4">
-                      Длительность: до 15 секунд
-                    </p>
-                    <ul className="text-sm text-muted-foreground space-y-2 mb-4">
-                      <li>• Концепция согласовывается заранее</li>
-                      <li>• Лёгкий монтаж, добавление текста</li>
-                      <li>• Разрешение: 1080p или 4K</li>
-                    </ul>
-                    <div className="space-y-2 pt-4 border-t">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Срок:</span>
-                        <span className="font-medium">2–3 рабочих дня</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 100 BYN</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Button 
-                    className="w-full mt-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white"
-                    size="lg"
-                    onClick={() => {
-                      const form = document.getElementById('order-form');
-                      if (form) {
-                        const serviceSelect = form.querySelector('select[name="serviceType"]') as HTMLSelectElement;
-                        const packageSelect = form.querySelector('select[name="package"]') as HTMLSelectElement;
-                        if (serviceSelect) serviceSelect.value = 'video';
-                        if (packageSelect) packageSelect.value = 'ad-video';
-                        form.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-              {/* Video Package 3 */}
-              <Card className="bg-card border border-border hover:border-primary/60 hover:shadow-lg transition-all rounded-3xl group flex flex-col h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">🎥</span>
-                  </div>
-                  <CardTitle className="text-2xl font-bold">Премиум-видео</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 flex-1 flex flex-col">
-                  <div className="flex-1">
-                    <p className="text-muted-foreground text-base mb-4">
-                      Длительность: до 30 секунд
-                    </p>
-                    <ul className="text-sm text-muted-foreground space-y-2 mb-4">
-                      <li>• Генерация кадров в едином стиле</li>
-                      <li>• Добавление текста, эффектов, музыки</li>
-                      <li>• Разрешение: 4K</li>
-                      <li>• До 2 итераций правок</li>
-                    </ul>
-                    <div className="space-y-2 pt-4 border-t">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Срок:</span>
-                        <span className="font-medium">3–5 рабочих дней</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-muted-foreground">Стоимость:</span>
-                        <span className="font-bold text-primary">от 200 BYN</span>
-                      </div>
-                    </div>
-                  </div>
-                  <Button 
-                    className="w-full mt-6 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white"
-                    size="lg"
-                    onClick={() => {
-                      const form = document.getElementById('order-form');
-                      if (form) {
-                        const serviceSelect = form.querySelector('select[name="serviceType"]') as HTMLSelectElement;
-                        const packageSelect = form.querySelector('select[name="package"]') as HTMLSelectElement;
-                        if (serviceSelect) serviceSelect.value = 'video';
-                        if (packageSelect) packageSelect.value = 'premium-video';
-                        form.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
 
           {/* Order Form */}
           <div id="order-form" className="max-w-2xl mx-auto mt-20">
@@ -635,45 +318,18 @@ const PhotoVideoService = () => {
               </div>
 
               <div>
-                <label htmlFor="serviceType" className="block text-sm font-medium text-foreground mb-2">
-                  Тип услуги
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  Ваше сообщение
                 </label>
-                <select
-                  id="serviceType"
-                  name="serviceType"
-                  value={formData.serviceType}
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
-                >
-                  <option value="">Выберите тип услуги</option>
-                  <option value="images">Генерация изображений</option>
-                  <option value="video">Генерация видео</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="package" className="block text-sm font-medium text-foreground mb-2">
-                  Пакет
-                </label>
-                <select
-                  id="package"
-                  name="package"
-                  value={formData.package}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300"
-                >
-                  <option value="">Выберите пакет</option>
-                  <optgroup label="Генерация изображений">
-                    <option value="basic-images">Базовый (от 25 BYN)</option>
-                    <option value="standard-images">Стандарт (от 60 BYN)</option>
-                    <option value="premium-images">Премиум (от 120 BYN)</option>
-                  </optgroup>
-                  <optgroup label="Генерация видео">
-                    <option value="short-video">Короткое видео (от 40 BYN)</option>
-                    <option value="ad-video">Рекламный ролик (от 100 BYN)</option>
-                    <option value="premium-video">Премиум-видео (от 200 BYN)</option>
-                  </optgroup>
-                </select>
+                  className="w-full px-4 py-3 border border-border rounded-xl bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all duration-300 resize-none"
+                  placeholder="Расскажите, что бы вы хотели..."
+                />
               </div>
 
               {submitStatus === 'success' && (

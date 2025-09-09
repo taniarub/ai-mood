@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Camera, Video, Globe, Code } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
@@ -10,10 +10,7 @@ const ServicesSection = () => {
       id: "web-design",
       title: "Создание сайтов и лендингов",
       icon: (
-        <div className="flex items-center gap-2">
-          <Globe className="w-6 h-6" />
-          <Code className="w-6 h-6" />
-        </div>
+        <Globe className="w-6 h-6 text-blue-600" />
       ),
       route: "/web-design-service"
     },
@@ -21,10 +18,7 @@ const ServicesSection = () => {
       id: "photo-video",
       title: "Генерация фотографий и видео",
       icon: (
-        <div className="flex items-center gap-2">
-          <Camera className="w-6 h-6" />
-          <Video className="w-6 h-6" />
-        </div>
+        <Camera className="w-6 h-6 text-emerald-600" />
       ),
       route: "/photo-video-service"
     }
@@ -48,23 +42,25 @@ const ServicesSection = () => {
             </p>
           </div>
 
-          {/* Services buttons */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          {/* Services cards */}
+          <div className="grid lg:grid-cols-2 gap-6">
             {services.map((service) => (
-              <Button
-                key={service.id}
+              <Card 
+                key={service.id} 
+                className="group hover:shadow-lg transition-all duration-300 bg-card border border-border backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
                 onClick={() => handleServiceClick(service.route)}
-                variant="outline"
-                size="lg"
-                className="h-32 w-full text-xl font-bold text-foreground bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-2 border-primary/30 hover:border-primary shadow-soft"
               >
-                <div className="flex flex-col items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full border border-primary/20">
-                    {service.icon}
+                <CardContent className="p-8">
+                  <div className="flex flex-col items-center text-center gap-6">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-background to-muted flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground">
+                      {service.title}
+                    </h3>
                   </div>
-                  <span>{service.title}</span>
-                </div>
-              </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

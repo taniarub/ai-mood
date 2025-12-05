@@ -2,103 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dream AI Design System - Violet and purple theme */
+/* MoodAI Design System - Violet Dreams Palette */
 
 @layer base {
   :root {
-    /* Core brand colors based on specified palette */
-    --background: 0 0% 100%;
-    --foreground: 266 50% 32%;
+    /* Core brand colors based on palette */
+    --background: 0 0% 100%; /* White for clean look, use Light Beige for sections */
+    --foreground: 243 20% 39%; /* Dark Purple #504E76 as main text color */
 
     --card: 0 0% 100%;
-    --card-foreground: 266 50% 32%;
+    --card-foreground: 243 20% 39%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 266 50% 32%;
+    --popover-foreground: 243 20% 39%;
 
-    /* Primary - Soft Violet (#B39DDB) */
-    --primary: 266 50% 73%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Dark Purple #504E76 */
+    --primary: 243 20% 39%;
+    --primary-foreground: 49 77% 94%; /* Light Beige text on Primary */
 
-    /* Secondary - Soft Lilac (#D8B4E2) */
-    --secondary: 294 47% 80%;
-    --secondary-foreground: 266 50% 32%;
+    /* Secondary - Pastel Purple #C4C3E3 */
+    --secondary: 242 33% 83%;
+    --secondary-foreground: 243 20% 39%;
 
-    /* Accent - Grape (#7D5BA6) */
-    --accent: 266 30% 52%;
+    /* Accent - Saturated Orange #F1642E */
+    --accent: 17 89% 56%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 266 20% 95%;
-    --muted-foreground: 266 20% 50%;
+    /* Muted - Light Beige #FDF8E2 or Light Orange #FCDD9D */
+    --muted: 49 77% 94%;
+    --muted-foreground: 243 20% 50%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive - Saturated Orange (closest to red) */
+    --destructive: 17 89% 56%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 266 20% 90%;
-    --input: 266 20% 95%;
-    --ring: 266 50% 73%;
+    --border: 242 33% 83%; /* Pastel Purple as border */
+    --input: 242 33% 83%;
+    --ring: 243 20% 39%;
 
     --radius: 1rem;
 
-    /* Custom gradient definitions */
-    --gradient-primary: linear-gradient(135deg, hsl(266 50% 73%), hsl(294 47% 80%));
-    --gradient-accent: linear-gradient(135deg, hsl(266 30% 52%), hsl(266 50% 73%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(266 20% 98%));
+    /* Specific Palette Vars for reference if needed in HSL */
+    --color-pastel-purple: 242 33% 83%;
+    --color-dark-purple: 243 20% 39%;
+    --color-light-beige: 49 77% 94%;
+    --color-calm-green: 74 34% 55%;
+    --color-light-orange: 40 91% 80%;
+    --color-saturated-orange: 17 89% 56%;
 
-    /* Shadow definitions with purple tints */
-    --shadow-soft: 0 4px 20px -4px hsl(266 50% 73% / 0.15);
-    --shadow-medium: 0 8px 30px -8px hsl(266 50% 73% / 0.25);
-    --shadow-hover: 0 12px 40px -12px hsl(266 30% 52% / 0.3);
+    /* Custom gradient definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(243 20% 39%), hsl(242 33% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(17 89% 56%), hsl(40 91% 80%));
+    --gradient-subtle: linear-gradient(180deg, hsl(49 77% 94%), hsl(0 0% 100%));
+
+    /* Shadow definitions */
+    --shadow-soft: 0 4px 20px -4px rgba(80, 78, 118, 0.15);
+    --shadow-medium: 0 8px 30px -8px rgba(80, 78, 118, 0.25);
+    --shadow-hover: 0 12px 40px -12px rgba(80, 78, 118, 0.3);
 
     /* Animation timing */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 243 20% 15%;
+    --foreground: 49 77% 94%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 243 20% 15%;
+    --card-foreground: 49 77% 94%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 243 20% 15%;
+    --popover-foreground: 49 77% 94%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 242 33% 83%; /* Pastel Purple as Primary in Dark Mode */
+    --primary-foreground: 243 20% 39%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 243 20% 30%;
+    --secondary-foreground: 49 77% 94%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 243 20% 25%;
+    --muted-foreground: 242 33% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 17 89% 56%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 243 20% 30%;
+    --input: 243 20% 30%;
+    --ring: 242 33% 83%;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

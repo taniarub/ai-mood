@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, ArrowUpRight } from "lucide-react";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -33,7 +33,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div 
-            className="text-2xl font-bold gradient-primary bg-clip-text text-transparent cursor-pointer"
+            className="text-2xl font-bold text-dark-purple cursor-pointer tracking-tight flex items-center gap-2"
             onClick={() => {
               if (window.location.pathname !== '/') {
                 window.location.href = '/';
@@ -42,18 +42,21 @@ const Header = () => {
               }
             }}
           >
-            Dream AI
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+               <span className="text-white font-bold text-lg">M</span>
+            </div>
+            MoodAI
           </div>
 
           {/* Navigation and CTA */}
-          <div className="hidden md:flex items-center gap-6">
-            <nav className="flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
+            <nav className="flex items-center gap-8">
               {navigationItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-sm font-medium transition-smooth hover:text-primary ${
-                    activeSection === item.id ? 'text-primary' : 'text-muted-foreground'
+                  className={`text-base font-medium transition-colors hover:text-primary ${
+                    activeSection === item.id ? 'text-primary' : 'text-slate-600'
                   }`}
                 >
                   {item.label}
@@ -61,32 +64,22 @@ const Header = () => {
               ))}
             </nav>
             
-            {/* Telegram button */}
-            <Button
-              onClick={() => window.open('https://t.me/laura_palmers_theme', '_blank')}
-              className="gap-2 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
-              size="sm"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Telegram
-            </Button>
-            
-            {/* Contacts button */}
-            <Button
-              onClick={() => scrollToSection("contacts")}
-              className="gap-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-500/90 hover:to-blue-600/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
-              size="sm"
-            >
-              <Phone className="w-4 h-4" />
-              Контакты
-            </Button>
+            <div className="flex items-center gap-4">
+                <Button
+                  onClick={() => window.open('https://t.me/laura_palmers_theme', '_blank')}
+                  className="rounded-full px-6 bg-dark-purple hover:bg-dark-purple/90 text-white shadow-none transition-all duration-300"
+                >
+                  <span className="mr-2">Связаться</span>
+                  <ArrowUpRight size={18} />
+                </Button>
+            </div>
           </div>
 
           {/* Mobile buttons and menu */}
           <div className="md:hidden flex items-center gap-2">
             <Button
               onClick={() => window.open('https://t.me/laura_palmers_theme', '_blank')}
-              className="gap-1 bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
+              className="gap-1 bg-dark-purple hover:bg-dark-purple/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
               size="sm"
             >
               <MessageCircle className="w-4 h-4" />
@@ -94,7 +87,7 @@ const Header = () => {
             </Button>
             <Button
               onClick={() => scrollToSection("contacts")}
-              className="gap-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-500/90 hover:to-blue-600/90 text-white shadow-md hover:shadow-lg transition-all duration-300"
+              className="gap-1 bg-pastel-purple/20 text-dark-purple hover:bg-pastel-purple/40 hover:text-dark-purple shadow-sm hover:shadow-md transition-all duration-300"
               size="sm"
             >
               <Phone className="w-4 h-4" />

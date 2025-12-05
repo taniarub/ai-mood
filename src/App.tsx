@@ -11,8 +11,6 @@ import ItemPhotography from "./pages/ItemPhotography";
 import VideoContent from "./pages/VideoContent";
 import ECommerce from "./pages/ECommerce";
 import WebDesign from "./pages/WebDesign";
-import PhotoVideoService from "./pages/PhotoVideoService";
-import WebDesignService from "./pages/WebDesignService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
@@ -31,8 +29,6 @@ const App = () => (
           <Route path="/video" element={<VideoContent />} />
           <Route path="/ecommerce" element={<ECommerce />} />
           <Route path="/web-design" element={<WebDesign />} />
-          <Route path="/photo-video-service" element={<PhotoVideoService />} />
-          <Route path="/web-design-service" element={<WebDesignService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

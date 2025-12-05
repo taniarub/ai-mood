@@ -61,10 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom Palette Colors
+				'pastel-purple': '#C4C3E3',
+				'dark-purple': '#504E76',
+				'light-beige': '#FDF8E2',
+				'calm-green': '#A3B565',
+				'light-orange': '#FCDD9D',
+				'saturated-orange': '#F1642E',
 			},
 			fontFamily: {
-				sans: ['Lora', 'serif'],
+				sans: ['Inter', 'sans-serif'],
+				serif: ['Lora', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -98,6 +106,14 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
+				},
 				'scale-in': {
 					'0%': {
 						opacity: '0',
@@ -121,6 +137,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
 				'scale-in': 'scale-in 0.5s ease-out',
 				'float': 'float 3s ease-in-out infinite'
 			}

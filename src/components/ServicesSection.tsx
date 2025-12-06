@@ -2,8 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Zap, Globe, Smartphone, Rocket, CheckCircle, Send, AlertCircle, ArrowRight, Layout, ArrowUpRight } from "lucide-react";
+import { Zap, Globe, Smartphone, Rocket, CheckCircle, Send, AlertCircle, ArrowRight, Layout, ArrowUpRight, Check } from "lucide-react";
 import { useState } from "react";
+import ludadaImage from "@/assets/images/website/ludada.jpg";
 import aiImage from "@/assets/images/website/ai.png";
 import anyImage from "@/assets/images/website/any.png";
 import web1Image from "@/assets/images/website/web1.png";
@@ -111,13 +112,21 @@ const ServicesSection = () => {
 
   const portfolioWorks = [
     {
-      id: 'ai',
-      title: 'AI-Academy',
-      description: 'Сайт школы искусственного интеллекта, который привлекает учеников (временно работает только с VPN)',
-      image: aiImage,
-      url: 'https://preview--neural-pathways-academy.lovable.app',
-      category: 'Корпоративный портал'
+      id: 'ludada',
+      title: 'Ludada AI',
+      description: 'Современный сайт для AI-сервиса генерации контента с интуитивным интерфейсом',
+      image: ludadaImage,
+      url: 'https://ludada.ai/',
+      category: 'AI-платформа'
     },
+    // {
+    //   id: 'ai',
+    //   title: 'AI-Academy',
+    //   description: 'Сайт школы искусственного интеллекта, который привлекает учеников (временно работает только с VPN)',
+    //   image: aiImage,
+    //   url: 'https://preview--neural-pathways-academy.lovable.app',
+    //   category: 'Корпоративный портал'
+    // },
     {
       id: 'any',
       title: 'AnyTranslator — AI-переводчик',
@@ -126,46 +135,46 @@ const ServicesSection = () => {
       url: 'https://anytranslator.app/',
       category: 'Сайт для IT-компании'
     },
-    {
-      id: 'vetka',
-      title: 'Flora Dream',
-      description: 'Красивый сайт цветочного магазина с лёгким заказом и бронированием',
-      image: web1Image,
-      url: 'https://vetka-recreation.vercel.app/',
-      category: 'Интернет-магазин'
-    },
-    {
-      id: 'flower',
-      title: 'Mon Amour Flowers',
-      description: 'Красивый сайт цветочного магазина с лёгким заказом',
-      image: flowerImage,
-      url: 'https://mon-amour-flowers.vercel.app/',
-      category: 'Landing Page'
-    },
-    {
-      id: 'school',
-      title: 'Language School',
-      description: 'Простой сайт языковой школы с ярким дизайном',
-      image: shoolImage,
-      url: 'https://language-school-clone.vercel.app/',
-      category: 'Промо-страница'
-    },
-    {
-      id: 'pilates',
-      title: 'Pilates LabSpace',
-      description: 'Стильный сайт студии пилатеса с удобной записью',
-      image: pilImage,
-      url: 'https://pilates-six.vercel.app/',
-      category: 'Сайт услуг'
-    },
-    {
-      id: 'brightsmile',
-      title: 'BrightSmile Clinic',
-      description: 'Простой сайт стоматологической клиники с удобной записью',
-      image: dentImage,
-      url: 'https://brightsmile-clinic.vercel.app/',
-      category: 'Медицинский сайт'
-    }
+    // {
+    //   id: 'vetka',
+    //   title: 'Flora Dream',
+    //   description: 'Красивый сайт цветочного магазина с лёгким заказом и бронированием',
+    //   image: web1Image,
+    //   url: 'https://vetka-recreation.vercel.app/',
+    //   category: 'Интернет-магазин'
+    // },
+    // {
+    //   id: 'flower',
+    //   title: 'Mon Amour Flowers',
+    //   description: 'Красивый сайт цветочного магазина с лёгким заказом',
+    //   image: flowerImage,
+    //   url: 'https://mon-amour-flowers.vercel.app/',
+    //   category: 'Landing Page'
+    // },
+    // {
+    //   id: 'school',
+    //   title: 'Language School',
+    //   description: 'Простой сайт языковой школы с ярким дизайном',
+    //   image: shoolImage,
+    //   url: 'https://language-school-clone.vercel.app/',
+    //   category: 'Промо-страница'
+    // },
+    // {
+    //   id: 'pilates',
+    //   title: 'Pilates LabSpace',
+    //   description: 'Стильный сайт студии пилатеса с удобной записью',
+    //   image: pilImage,
+    //   url: 'https://pilates-six.vercel.app/',
+    //   category: 'Сайт услуг'
+    // },
+    // {
+    //   id: 'brightsmile',
+    //   title: 'BrightSmile Clinic',
+    //   description: 'Простой сайт стоматологической клиники с удобной записью',
+    //   image: dentImage,
+    //   url: 'https://brightsmile-clinic.vercel.app/',
+    //   category: 'Медицинский сайт'
+    // }
   ];
 
   const services = [
@@ -230,7 +239,7 @@ const ServicesSection = () => {
           </div>
           
                   <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 tracking-tight leading-[1.1]">
-                    Прозрачный процесс работы
+                    Почему выбирают нас
                   </h2>
                   
                   <div className="flex items-center gap-4 mb-10">
@@ -268,16 +277,30 @@ const ServicesSection = () => {
                         <h3 className="text-2xl md:text-3xl font-bold text-slate-900 flex-1 group-hover:text-primary transition-colors">
                            {service.title}
                         </h3>
-                        <div className={`w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center transition-transform duration-300 ${activeService === index ? 'rotate-180 bg-slate-900 text-white border-slate-900' : 'bg-transparent text-slate-400'}`}>
+                        <div className={`w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center transition-all duration-300 ${activeService === index ? 'opacity-0 pointer-events-none' : 'bg-transparent text-slate-400'}`}>
                            <ArrowRight className={`w-4 h-4 ${activeService === index ? 'rotate-[-45deg]' : ''}`} />
                         </div>
                 </div>
 
                      <div className={`grid transition-all duration-500 ease-in-out overflow-hidden ${activeService === index ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
-                        <div className="min-h-0">
-                              <p className="text-slate-600 text-lg leading-relaxed pl-8 md:pl-12">
+                        <div className="min-h-0 flex flex-col md:flex-row gap-6 pl-8 md:pl-12">
+                           <div className="flex-1">
+                              <p className="text-slate-600 text-lg leading-relaxed">
                                  {service.description}
                               </p>
+                           </div>
+                           <div className="w-full md:w-48 h-32 shrink-0 shadow-sm relative">
+                              <div className="absolute -top-[1px] -right-[1px] w-14 h-14 bg-background rounded-bl-[2rem] z-10 flex items-center justify-center">
+                                  <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">
+                                      <ArrowUpRight className="w-5 h-5" />
+                                  </div>
+                              </div>
+                              <img 
+                                 src={service.image} 
+                                 alt={service.title} 
+                                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700 rounded-xl rounded-tr-[3rem]"
+                              />
+                           </div>
                 </div>
               </div>
             </div>
@@ -308,38 +331,38 @@ const ServicesSection = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {portfolioWorks.map((work) => (
                   <CarouselItem key={work.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="group relative rounded-[2.5rem] bg-white border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-[500px]">
+                    <div className="group relative rounded-[2.5rem] bg-white border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col aspect-[16/9]">
                       {/* Image Container */}
                       <div className="absolute inset-0 z-0">
-                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent z-10 opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
-                         <img 
-                          src={work.image} 
-                          alt={work.title} 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                         <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent z-10 opacity-90 group-hover:opacity-70 transition-opacity duration-500" />
+                         <img
+                          src={work.image}
+                          alt={work.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                          />
                       </div>
 
                       {/* Content Overlay */}
-                      <div className="relative z-20 p-8 flex flex-col h-full justify-end text-white">
+                      <div className="relative z-20 p-8 flex flex-col h-full justify-end text-slate-900">
                         <div className="mb-auto flex justify-between items-start">
-                          <Badge variant="secondary" className="backdrop-blur-md bg-white/20 text-white border-white/20 px-4 py-1.5 rounded-full shadow-sm">
+                          <Badge variant="secondary" className="backdrop-blur-md bg-white/80 text-slate-900 border-slate-200 px-4 py-1.5 rounded-full shadow-sm">
                       {work.category}
                     </Badge>
-                          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                          <div className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-slate-900 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                              <ArrowUpRight size={20} />
                   </div>
                 </div>
-                        
+
                         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-white leading-tight">{work.title}</h3>
-                          <p className="text-slate-200 text-base md:text-lg mb-6 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-slate-900 leading-tight">{work.title}</h3>
+                          <p className="text-slate-700 text-base md:text-lg mb-6 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                             {work.description}
                           </p>
-                          <a 
-                            href={work.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="inline-flex items-center gap-2 text-white font-semibold border-b-2 border-white/0 hover:border-white transition-all pb-1"
+                          <a
+                            href={work.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-slate-900 font-semibold border-b-2 border-slate-900/0 hover:border-slate-900 transition-all pb-1"
                           >
                     Смотреть проект <Globe className="w-4 h-4" />
                   </a>
@@ -366,50 +389,37 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* Pricing packages */}
-        <div className="max-w-6xl mx-auto mb-20 mt-20">
-          <div className="text-center mb-14">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
-              Выберите подходящий пакет для вашего проекта
+        {/* Pricing plans */}
+        <div className="max-w-7xl mx-auto mb-20 mt-32 px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+              Тарифные планы
             </h3>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Выберите подходящий пакет для вашего проекта
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Package 1 */}
-            <div className="bg-slate-50 border border-slate-100 hover:border-primary/30 hover:shadow-xl transition-all rounded-[2.5rem] p-8 flex flex-col h-full group relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-slate-200 to-slate-300 group-hover:from-primary group-hover:to-orange-400 transition-all duration-500" />
-              
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-sm text-4xl">
-                  🚀
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900">Быстрый старт</h3>
-              </div>
-              
-              <div className="flex-1 flex flex-col space-y-6">
-                <div className="flex-1">
-                  <p className="text-slate-600 text-base mb-6 text-center">
-                    Идеально для запуска MVP или простого лендинга
-                  </p>
-                  <ul className="space-y-3 text-slate-600 text-sm">
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> До 3 страниц</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Адаптивная верстка</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Формы заявки</li>
-                  </ul>
-                </div>
-                
-                <div className="pt-6 border-t border-slate-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-slate-500">Срок:</span>
-                      <span className="font-bold text-slate-900">1–2 дня</span>
+          
+          <div className="grid lg:grid-cols-3 gap-8 items-start">
+            {/* Package 1 - Starter */}
+            <div className="bg-white rounded-[2.5rem] shadow-sm flex flex-col h-full">
+              <div className="p-2">
+                <div className="bg-slate-100 rounded-[2rem] p-8">
+                  <div className="mb-8">
+                    <span className="inline-block bg-white px-4 py-1.5 rounded-full text-xs font-bold text-slate-900 mb-6 shadow-sm">
+                      Быстрый старт
+                    </span>
+                    <div className="flex items-baseline gap-1 mb-2">
+                      <span className="text-5xl font-bold text-slate-900 tracking-tight">300</span>
+                      <span className="text-xl font-bold text-slate-900">BYN</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-500">Стоимость:</span>
-                      <span className="font-bold text-2xl text-primary">300 BYN</span>
-                    </div>
+                    <p className="text-slate-600 text-sm font-medium">
+                      Идеально для запуска MVP
+                    </p>
                 </div>
 
                 <Button 
-                  className="w-full rounded-xl py-6 text-base bg-slate-900 hover:bg-slate-800 text-white shadow-lg hover:shadow-xl transition-all"
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white rounded-full py-6 text-base font-medium shadow-lg hover:shadow-xl transition-all"
                   onClick={() => {
                     const form = document.getElementById('order-form');
                     if (form) {
@@ -419,52 +429,45 @@ const ServicesSection = () => {
                     }
                   }}
                 >
-                  Выбрать пакет
+                    Заказать проект
                 </Button>
               </div>
-            </div>
-            {/* Package 2 */}
-            <div className="bg-white border-2 border-primary shadow-2xl hover:shadow-3xl transition-all rounded-[2.5rem] p-8 flex flex-col h-full group relative overflow-hidden transform md:-translate-y-4">
-              <div className="absolute top-6 right-6">
-                <span className="bg-primary text-white px-4 py-1.5 text-sm font-bold rounded-full shadow-md">
-                  Популярный
-                </span>
               </div>
               
-              <div className="text-center mb-8 mt-4">
-                <div className="w-20 h-20 mx-auto mb-6 bg-slate-50 rounded-2xl flex items-center justify-center shadow-sm text-5xl">
-                  🎨
+              <div className="px-10 pb-10 pt-4 space-y-5">
+                 {[
+                   'До 3 страниц',
+                   'Адаптивная верстка',
+                   'Формы заявки',
+                   'Срок: 1–2 дня'
+                 ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-slate-400 shrink-0 mt-1" />
+                    <span className="text-slate-600 text-sm font-medium">{item}</span>
                 </div>
-                <h3 className="text-3xl font-bold text-slate-900">Персональный</h3>
+                 ))}
               </div>
-              
-              <div className="flex-1 flex flex-col space-y-6">
-                <div className="flex-1">
-                  <p className="text-slate-600 text-base mb-6 text-center font-medium">
-                    Индивидуальный дизайн и продающая структура
-                  </p>
-                  <ul className="space-y-4 text-slate-700 text-sm font-medium">
-                    <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> До 7 страниц (Главная, Услуги, Контакты)</li>
-                    <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> Адаптив под все устройства</li>
-                    <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> Интеграция форм и мессенджеров</li>
-                    <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> Базовое SEO и аналитика</li>
-                    <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-primary flex-shrink-0" /> Копирайтинг текстов</li>
-                  </ul>
                 </div>
                 
-                <div className="pt-6 border-t border-slate-100">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-slate-500">Срок:</span>
-                      <span className="font-bold text-slate-900">3–5 дней</span>
+            {/* Package 2 - Professional (Highlighted) */}
+            <div className="bg-white rounded-[2.5rem] shadow-xl flex flex-col h-full relative z-10 transform lg:-translate-y-4">
+              <div className="p-2">
+                <div className="bg-[#E0E7FF] rounded-[2rem] p-8">
+                  <div className="mb-8">
+                    <span className="inline-block bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-slate-900 mb-6 shadow-sm">
+                      ПРОФЕССИОНАЛЬНЫЙ
+                    </span>
+                    <div className="flex items-baseline gap-1 mb-2">
+                      <span className="text-5xl font-bold text-slate-900 tracking-tight">500</span>
+                      <span className="text-xl font-bold text-slate-900">BYN</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-500">Стоимость:</span>
-                      <span className="font-bold text-3xl text-primary">500 BYN</span>
-                    </div>
+                    <p className="text-slate-600 text-sm font-medium">
+                      Индивидуальный дизайн
+                    </p>
                 </div>
 
                 <Button 
-                  className="w-full rounded-xl py-7 text-lg bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-2xl transition-all font-bold"
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white rounded-full py-6 text-base font-medium shadow-lg hover:shadow-xl transition-all"
                   onClick={() => {
                     const form = document.getElementById('order-form');
                     if (form) {
@@ -478,41 +481,43 @@ const ServicesSection = () => {
                 </Button>
               </div>
             </div>
-            {/* Package 3 */}
-            <div className="bg-slate-50 border border-slate-100 hover:border-primary/30 hover:shadow-xl transition-all rounded-[2.5rem] p-8 flex flex-col h-full group relative overflow-hidden">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center shadow-sm text-4xl">
-                  ⚡
+
+              <div className="px-10 pb-10 pt-4 space-y-5">
+                 {[
+                   'До 7 страниц',
+                   'Адаптив под все устройства',
+                   'Интеграция форм и мессенджеров',
+                   'Базовое SEO и аналитика',
+                   'Копирайтинг текстов',
+                   'Срок: 3–5 дней'
+                 ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-slate-400 shrink-0 mt-1" />
+                    <span className="text-slate-600 text-sm font-medium">{item}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">PRO Business</h3>
+                 ))}
               </div>
-              
-              <div className="flex-1 flex flex-col space-y-6">
-                <div className="flex-1">
-                  <p className="text-slate-600 text-base mb-6 text-center">
-                    Комплексное решение для серьезного бизнеса
-                  </p>
-                  <ul className="space-y-3 text-slate-600 text-sm">
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Неограниченное число страниц</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Интернет-магазин / Каталог</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Сложные интеграции (CRM, 1C)</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Продвинутое SEO</li>
-                  </ul>
                 </div>
                 
-                <div className="pt-6 border-t border-slate-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-slate-500">Срок:</span>
-                      <span className="font-bold text-slate-900">5–7 дней</span>
+            {/* Package 3 - Enterprise */}
+             <div className="bg-white rounded-[2.5rem] shadow-sm flex flex-col h-full">
+              <div className="p-2">
+                <div className="bg-[#FDF2F8] rounded-[2rem] p-8">
+                  <div className="mb-8">
+                    <span className="inline-block bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold text-slate-900 mb-6 shadow-sm">
+                      БИЗНЕС-РЕШЕНИЕ
+                    </span>
+                    <div className="flex items-baseline gap-1 mb-2">
+                      <span className="text-5xl font-bold text-slate-900 tracking-tight">700</span>
+                      <span className="text-xl font-bold text-slate-900">BYN</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-slate-500">Стоимость:</span>
-                      <span className="font-bold text-2xl text-primary">700 BYN</span>
-                    </div>
+                    <p className="text-slate-600 text-sm font-medium">
+                      Для крупного бизнеса
+                    </p>
                 </div>
 
                 <Button 
-                  className="w-full rounded-xl py-6 text-base bg-slate-900 hover:bg-slate-800 text-white shadow-lg hover:shadow-xl transition-all"
+                    className="w-full bg-slate-900 hover:bg-slate-800 text-white rounded-full py-6 text-base font-medium shadow-lg hover:shadow-xl transition-all"
                   onClick={() => {
                     const form = document.getElementById('order-form');
                     if (form) {
@@ -522,16 +527,35 @@ const ServicesSection = () => {
                     }
                   }}
                 >
-                  Выбрать пакет
+                    Заказать проект
                 </Button>
+                </div>
+              </div>
+
+              <div className="px-10 pb-10 pt-4 space-y-5">
+                 {[
+                   'Неограниченное число страниц',
+                   'Интернет-магазин / Каталог',
+                   'Сложные интеграции (CRM, 1C)',
+                   'Продвинутое SEO',
+                   'Срок: 5–7 дней'
+                 ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <Check className="w-4 h-4 text-slate-400 shrink-0 mt-1" />
+                    <span className="text-slate-600 text-sm font-medium">{item}</span>
+                  </div>
+                 ))}
               </div>
             </div>
           </div>
-          <div className="max-w-6xl mx-auto mt-4 mb-4 text-xs text-muted-foreground text-left">
+          
+           <div className="max-w-6xl mx-auto mt-12 text-center space-y-2">
+            <p className="text-sm text-slate-400">
             Окончательная стоимость зависит от проекта и его сложности
-          </div>
-          <div className="max-w-6xl mx-auto mt-4 mb-4 text-xs text-muted-foreground text-left">
+            </p>
+            <p className="text-sm text-slate-400">
             Бесплатная техподдержка сайта в течение 1 месяца
+            </p>
           </div>
         </div>
 

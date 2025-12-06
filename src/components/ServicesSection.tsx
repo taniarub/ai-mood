@@ -242,22 +242,9 @@ const ServicesSection = () => {
                     Почему выбирают нас
                   </h2>
                   
-                  <div className="flex items-center gap-4 mb-10">
-                     <div className="flex -space-x-3">
-                        <div className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center overflow-hidden">
-                          <img src="https://i.pravatar.cc/100?img=33" alt="Avatar" className="w-full h-full object-cover" />
-                </div>
-                        <div className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center overflow-hidden">
-                          <img src="https://i.pravatar.cc/100?img=47" alt="Avatar" className="w-full h-full object-cover" />
-                </div>
-                        <div className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center overflow-hidden">
-                           <span className="text-xs font-bold text-slate-600">+3</span>
-              </div>
-            </div>
-                     <p className="text-sm text-slate-600 max-w-[200px] leading-tight">
-                        Мы создаем не просто сайты, а эффективные инструменты
-              </p>
-            </div>
+                  <p className="text-base text-slate-600 leading-relaxed mb-10">
+                    Мы создаем не просто сайты, а эффективные инструменты
+                  </p>
 
               </div>
             </div>
